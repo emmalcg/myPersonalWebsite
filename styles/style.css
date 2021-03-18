@@ -1,0 +1,372 @@
+html {
+  line-height: 1.15;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+}
+
+article, aside, footer, header, nav, section {
+  display: block;
+}
+
+h1 {
+  font-size: 2em;
+  margin: .67em 0;
+}
+
+figcaption, figure, main {
+  display: block;
+}
+
+figure {
+  margin: 1em 40px;
+}
+
+hr {
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
+  height: 0;
+  overflow: visible;
+}
+
+pre {
+  font-family: monospace,monospace;
+  font-size: 1em;
+}
+
+a {
+  background-color: transparent;
+  -webkit-text-decoration-skip: objects;
+}
+
+abbr[title] {
+  border-bottom: none;
+  text-decoration: underline;
+  -webkit-text-decoration: underline dotted;
+          text-decoration: underline dotted;
+}
+
+b, strong {
+  font-weight: inherit;
+}
+
+b, strong {
+  font-weight: bolder;
+}
+
+code, kbd, samp {
+  font-family: monospace,monospace;
+  font-size: 1em;
+}
+
+dfn {
+  font-style: italic;
+}
+
+mark {
+  background-color: #ff0;
+  color: #000;
+}
+
+small {
+  font-size: 80%;
+}
+
+sub, sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -.25em;
+}
+
+sup {
+  top: -.5em;
+}
+
+audio, video {
+  display: inline-block;
+}
+
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+
+img {
+  border-style: none;
+}
+
+svg:not(:root) {
+  overflow: hidden;
+}
+
+button, input, optgroup, select, textarea {
+  font-family: sans-serif;
+  font-size: 100%;
+  line-height: 1.15;
+  margin: 0;
+}
+
+button, input {
+  overflow: visible;
+}
+
+button, select {
+  text-transform: none;
+}
+
+button, html [type=button], [type=reset], [type=submit] {
+  -webkit-appearance: button;
+}
+
+button::-moz-focus-inner, [type=button]::-moz-focus-inner, [type=reset]::-moz-focus-inner, [type=submit]::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+button:-moz-focusring, [type=button]:-moz-focusring, [type=reset]:-moz-focusring, [type=submit]:-moz-focusring {
+  outline: 1px dotted ButtonText;
+}
+
+fieldset {
+  padding: .35em .75em .625em;
+}
+
+legend {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  color: inherit;
+  display: table;
+  max-width: 100%;
+  padding: 0;
+  white-space: normal;
+}
+
+progress {
+  display: inline-block;
+  vertical-align: baseline;
+}
+
+textarea {
+  overflow: auto;
+}
+
+[type=checkbox], [type=radio] {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0;
+}
+
+[type=number]::-webkit-inner-spin-button, [type=number]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+[type=search] {
+  -webkit-appearance: textfield;
+  outline-offset: -2px;
+}
+
+[type=search]::-webkit-search-cancel-button, [type=search]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  font: inherit;
+}
+
+details, menu {
+  display: block;
+}
+
+summary {
+  display: list-item;
+}
+
+canvas {
+  display: inline-block;
+}
+
+template {
+  display: none;
+}
+
+[hidden] {
+  display: none;
+}
+
+html {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  -webkit-clip-path: inset(100%);
+          clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+@font-face {
+  font-family: 'Sequenz';
+  src: url(/assets/fonts/Sequenz_W-Regular.woff2) format("woff2"), url(/assets/fonts/Sequenz_W-Regular.woff) format("woff"), url(/assets/fonts/Sequenz-Regular.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: 'Sequenz-M-I';
+  src: url(/assets/fonts/Sequenz_W-MediumItalic.woff2) format("woff2"), url(/assets/fonts/Sequenz_W-MediumItalic.woff) format("woff"), url(/assets/fonts/Sequenz-MediumItalic.ttf) format("truetype");
+}
+
+html {
+  font-size: 62.5%;
+  color: #707070;
+  font-family: 'Lato', sans-serif;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  color: #707070;
+  text-transform: uppercase;
+}
+
+a:hover, a:focus {
+  color: transparent;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #707070;
+}
+
+h1 {
+  font-family: 'Sequenz-M-I', sans-serif;
+  text-transform: uppercase;
+  font-size: 8.5rem;
+  letter-spacing: 8px;
+  color: transparent;
+  -webkit-text-stroke-width: 0.5px;
+  -webkit-text-stroke-color: #707070;
+}
+
+header h2 {
+  text-transform: uppercase;
+  font-size: 3.5rem;
+  font-weight: 400;
+  letter-spacing: 1.5px;
+}
+
+header a {
+  font-family: 'Sequenz', sans-serif;
+  font-size: 3rem;
+  letter-spacing: 2px;
+}
+
+main h2 {
+  font-family: 'Sequenz', sans-serif;
+  font-size: 5rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: white;
+  -webkit-text-stroke-width: 0.5px;
+  -webkit-text-stroke-color: #707070;
+}
+
+.about p {
+  font-size: 1.8rem;
+}
+
+.skills li {
+  font-size: 2rem;
+}
+
+h3 {
+  font-family: 'Sequenz', sans-serif;
+  font-size: 3rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 200;
+}
+
+.social a {
+  font-size: 3rem;
+  letter-spacing: 2px;
+}
+
+form {
+  font-size: 3rem;
+}
+
+input,
+textarea {
+  color: #707070;
+  padding: 10px;
+}
+
+input:hover, input:focus,
+textarea:hover,
+textarea:focus {
+  background: linear-gradient(67deg, rgba(141, 227, 247, 0.5) 0%, rgba(208, 255, 225, 0.5) 100%);
+}
+
+button {
+  font-family: 'Sequenz', sans-serif;
+  text-transform: uppercase;
+  font-size: 4.5rem;
+  color: #707070;
+  background: white;
+  border: 1px solid #707070;
+}
+
+button:hover, button:focus {
+  color: transparent;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #707070;
+}
+
+::-webkit-input-placeholder {
+  color: #707070;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  opacity: 1;
+}
+
+:-ms-input-placeholder {
+  color: #707070;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  opacity: 1;
+}
+
+::-ms-input-placeholder {
+  color: #707070;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  opacity: 1;
+}
+
+::placeholder {
+  color: #707070;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  opacity: 1;
+}

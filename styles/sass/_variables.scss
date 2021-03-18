@@ -1,0 +1,19 @@
+@font-face {
+    font-family: 'Sequenz';
+    src: url(/assets/fonts/Sequenz_W-Regular.woff2) format('woff2'),
+    url(/assets/fonts/Sequenz_W-Regular.woff) format('woff'),
+    url(/assets/fonts/Sequenz-Regular.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: 'Sequenz-M-I';
+    src: url(/assets/fonts/Sequenz_W-MediumItalic.woff2) format('woff2'),
+    url(/assets/fonts/Sequenz_W-MediumItalic.woff) format('woff'),
+    url(/assets/fonts/Sequenz-MediumItalic.ttf) format('truetype');
+}
+
+
+$primaryColor: #707070;
+$gradientOne: linear-gradient(67deg, rgba(141,227,247,0.5) 0%, rgba(208,255,225,0.5) 100%);
+
+$mobile: 500px;
