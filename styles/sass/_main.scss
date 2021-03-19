@@ -93,6 +93,16 @@ header li:nth-child(3) {
     border-right: 0.5px solid $primaryColor;
 }
 
+.small-box {
+    background: $gradientOne;
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+}
+
+.big-box {
+    background: $gradientOne;
+}
+
 header .long-box {
     border-top: 0.5px solid $primaryColor;
     grid-column: 1 / -1;

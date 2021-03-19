@@ -339,6 +339,20 @@ header li:nth-child(3) {
   border-right: 0.5px solid #707070;
 }
 
+.small-box {
+  background: linear-gradient(67deg, rgba(141, 227, 247, 0.5) 0%, rgba(208, 255, 225, 0.5) 100%);
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-column: 1 / 2;
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 1;
+  grid-row: 2 / 3;
+}
+
+.big-box {
+  background: linear-gradient(67deg, rgba(141, 227, 247, 0.5) 0%, rgba(208, 255, 225, 0.5) 100%);
+}
+
 header .long-box {
   border-top: 0.5px solid #707070;
   grid-column: 1 / -1;
