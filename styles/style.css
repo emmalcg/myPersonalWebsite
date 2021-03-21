@@ -719,12 +719,6 @@ button:hover, button:focus {
   .long-box {
     padding: 10px 60px;
   }
-  .skills {
-        grid-template-areas: "long-box   long-box    long-box" "skills          skills      currently-learning" "skills          skills      big-box" "skills          skills      currently-building";
-  }
-}
-
-@media (max-width: 790px) {
   header {
     -ms-grid-columns: 0.7fr 1.3fr 1.5fr;
         grid-template-columns: 0.7fr 1.3fr 1.5fr;
@@ -733,6 +727,9 @@ button:hover, button:focus {
   }
   header h2 {
     padding: 30px 20px;
+  }
+  .skills {
+        grid-template-areas: "long-box   long-box    long-box" "skills          skills      currently-learning" "skills          skills      big-box" "skills          skills      currently-building";
   }
   .contact {
     -ms-grid-columns: 2rem 0.7fr 2rem 1fr 2rem;
