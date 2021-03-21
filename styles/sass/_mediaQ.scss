@@ -31,12 +31,7 @@
     }
 }
 
-@media (max-width: 850px) {
-
-    .long-box {
-        padding: 10px 60px;
-    }
-
+@media (max-width: 950px) {
     header {
         grid-template-columns: 0.7fr 1.3fr 1.5fr;
         grid-template-rows: 0.7fr 2fr 2fr 7rem;
@@ -45,6 +40,14 @@
             padding: 30px 20px;
         }
     }
+}
+
+@media (max-width: 850px) {
+
+    .long-box {
+        padding: 10px 60px;
+    }
+
 
     .skills {
         grid-template-areas:

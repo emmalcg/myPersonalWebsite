@@ -302,10 +302,10 @@ h3 {
 header {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 1fr 1fr 2fr;
-      grid-template-columns: 1fr 1fr 2fr;
-  -ms-grid-rows: 1fr 2fr 2fr 7rem;
-      grid-template-rows: 1fr 2fr 2fr 7rem;
+  -ms-grid-columns: 0.7fr 1.3fr 1.5fr;
+      grid-template-columns: 0.7fr 1.3fr 1.5fr;
+  -ms-grid-rows: 0.8fr 2fr 2fr 7rem;
+      grid-template-rows: 0.8fr 2fr 2fr 7rem;
       grid-template-areas: "header     header      nav" "header     header      big-box" "small-box   h2      big-box" "long-box       long-box        long-box";
   height: 70vh;
   min-height: 500px;
@@ -346,7 +346,7 @@ header h2 {
   -ms-grid-column: 4;
   -ms-grid-column-span: 2;
   grid-area: h2;
-  padding: 20px 10px;
+  padding: 30px 20px;
   text-transform: uppercase;
   font-size: calc(1.5rem + 1vw);
   font-weight: 300;
@@ -722,10 +722,7 @@ footer {
   }
 }
 
-@media (max-width: 850px) {
-  .long-box {
-    padding: 10px 60px;
-  }
+@media (max-width: 950px) {
   header {
     -ms-grid-columns: 0.7fr 1.3fr 1.5fr;
         grid-template-columns: 0.7fr 1.3fr 1.5fr;
@@ -734,6 +731,12 @@ footer {
   }
   header h2 {
     padding: 30px 20px;
+  }
+}
+
+@media (max-width: 850px) {
+  .long-box {
+    padding: 10px 60px;
   }
   .skills {
         grid-template-areas: "long-box   long-box    long-box" "skills          skills      currently-learning" "skills          skills      big-box" "skills          skills      currently-building";
