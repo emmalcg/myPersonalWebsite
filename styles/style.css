@@ -266,7 +266,7 @@ a {
 }
 
 a:hover, a:focus {
-  color: #F5F5F5;
+  color: white;
   -webkit-text-stroke-width: 1px;
   -webkit-text-stroke-color: #575757;
   font-weight: 600;
@@ -277,7 +277,7 @@ main h2 {
   text-transform: uppercase;
   font-size: 5rem;
   letter-spacing: 2px;
-  color: #F5F5F5;
+  color: white;
   -webkit-text-stroke-width: 1px;
   -webkit-text-stroke-color: #707070;
 }
@@ -285,7 +285,7 @@ main h2 {
 h3 {
   font-family: "Overpass", sans-serif;
   text-transform: uppercase;
-  font-size: calc(1.5rem + 1vw);
+  font-size: calc(1.9rem + 0.5vw);
   letter-spacing: 2px;
   font-weight: 400;
 }
@@ -304,8 +304,8 @@ header {
   display: grid;
   -ms-grid-columns: 0.7fr 1.3fr 1.5fr;
       grid-template-columns: 0.7fr 1.3fr 1.5fr;
-  -ms-grid-rows: 0.8fr 2fr 2fr 7rem;
-      grid-template-rows: 0.8fr 2fr 2fr 7rem;
+  -ms-grid-rows: 10rem 2fr 2fr 7rem;
+      grid-template-rows: 10rem 2fr 2fr 7rem;
       grid-template-areas: "header     header      nav" "header     header      big-box" "small-box   h2      big-box" "long-box       long-box        long-box";
   height: 70vh;
   min-height: 500px;
@@ -333,7 +333,7 @@ header h1 {
   text-transform: uppercase;
   font-size: calc(3rem + 3vw);
   letter-spacing: 8px;
-  color: transparent;
+  color: white;
   -webkit-text-stroke-width: 1px;
   -webkit-text-stroke-color: #707070;
   border: 0.5px solid #707070;
@@ -387,7 +387,7 @@ header li {
           align-items: center;
   width: 50%;
   padding-right: 15px;
-  font-size: calc(1.4rem + 1vw);
+  font-size: calc(1.9rem + 0.5vw);
   letter-spacing: 1px;
   font-weight: 400;
   border-bottom: 0.5px solid #707070;
@@ -401,14 +401,12 @@ header .small-box {
   -ms-grid-row: 3;
   -ms-grid-column: 1;
   grid-area: small-box;
-  background: linear-gradient(67deg, rgba(141, 227, 247, 0.3) 0%, rgba(208, 255, 225, 0.3) 100%);
 }
 
 header .big-box {
   -ms-grid-row: 3;
   -ms-grid-column: 3;
   grid-area: big-box;
-  background: linear-gradient(67deg, rgba(141, 227, 247, 0.3) 0%, rgba(208, 255, 225, 0.3) 100%);
 }
 
 header .long-box {
@@ -507,7 +505,6 @@ header .long-box {
   height: 100%;
   border: 0.5px solid #707070;
   border-right: none;
-  background: linear-gradient(67deg, rgba(141, 227, 247, 0.3) 0%, rgba(208, 255, 225, 0.3) 100%);
 }
 
 .portfolio {
@@ -644,7 +641,7 @@ button {
 }
 
 button:hover, button:focus {
-  color: #F5F5F5;
+  color: white;
   -webkit-text-stroke-width: 1px;
   -webkit-text-stroke-color: #707070;
 }
@@ -682,12 +679,6 @@ footer {
   text-align: center;
   font-size: 1.6rem;
   border-top: 0.5px solid #707070;
-}
-
-@media (min-width: 1300px) {
-  header li {
-    font-size: 2.8rem;
-  }
 }
 
 @media (max-width: 1200px) {

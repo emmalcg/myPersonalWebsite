@@ -29,7 +29,7 @@ a {
 
     &:hover,
     &:focus {
-        color: $offWhite;
+        color: white;
         -webkit-text-stroke-width: 1px;
         -webkit-text-stroke-color: darken($primaryColor, 10%)
         ;
@@ -42,7 +42,7 @@ main h2 {
     text-transform: uppercase;
     font-size: 5rem;
     letter-spacing: 2px;
-    color: $offWhite;
+    color: white;
     -webkit-text-stroke-width: 1px;
     -webkit-text-stroke-color: $primaryColor;
 }
@@ -50,7 +50,7 @@ main h2 {
 h3 {
     font-family: $bodyFont;
     text-transform: uppercase;
-    font-size: calc(1.5rem + 1vw);
+    font-size: calc(1.9rem + 0.5vw);
     letter-spacing: 2px;
     font-weight: 400;
 }
@@ -67,7 +67,7 @@ h3 {
 header {
     display: grid;
     grid-template-columns: 0.7fr 1.3fr 1.5fr;
-    grid-template-rows: 0.8fr 2fr 2fr 7rem;
+    grid-template-rows: 10rem 2fr 2fr 7rem;
     grid-template-areas: 
     "header     header      nav"
     "header     header      big-box"
@@ -92,7 +92,7 @@ header {
         text-transform: uppercase;
         font-size: calc(3rem + 3vw);
         letter-spacing: 8px;
-        color: transparent;
+        color: white;
         -webkit-text-stroke-width: 1px;
         -webkit-text-stroke-color: $primaryColor;
     
@@ -139,7 +139,7 @@ header {
         width: 50%;
         padding-right: 15px;
     
-        font-size: calc(1.4rem + 1vw);
+        font-size: calc(1.9rem + 0.5vw);
         letter-spacing:1px;
         font-weight: 400;
     
@@ -153,14 +153,10 @@ header {
 
     .small-box {
         grid-area: small-box;
-    
-        background: $gradientOne;
     }
     
     .big-box {
         grid-area: big-box;
-    
-        background: $gradientOne;
     }
 
     .long-box {
@@ -251,8 +247,6 @@ header {
         
         border: 0.5px solid $primaryColor;
         border-right: none;
-
-        background: $gradientOne;
     }
 }
 //**skills end**//
@@ -382,7 +376,7 @@ button {
 
     &:hover,
     &:focus {
-        color: $offWhite;
+        color: white;
         -webkit-text-stroke-width: 1px;
         -webkit-text-stroke-color: $primaryColor;
     }
