@@ -295,8 +295,9 @@ header {
   display: grid;
   -ms-grid-columns: 1fr 1fr 2fr;
       grid-template-columns: 1fr 1fr 2fr;
-  -ms-grid-rows: 1fr 2fr 1fr 0.7fr 7rem;
-      grid-template-rows: 1fr 2fr 1fr 0.7fr 7rem;
+  -ms-grid-rows: 1fr 2fr 2fr 7rem;
+      grid-template-rows: 1fr 2fr 2fr 7rem;
+      grid-template-areas: "header     header      nav" "header     header      big-box" "small-box   h2      big-box" "long-box       long-box        long-box";
   height: 70vh;
   min-height: 500px;
   max-height: 660px;
@@ -304,12 +305,11 @@ header {
 }
 
 header h1 {
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 2;
-  grid-column: 1 / 3;
   -ms-grid-row: 1;
   -ms-grid-row-span: 2;
-  grid-row: 1 / 3;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: header;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -334,12 +334,10 @@ header h1 {
 }
 
 header h2 {
-  -ms-grid-column: 2;
-  -ms-grid-column-span: 1;
-  grid-column: 2 / 3;
-  -ms-grid-row: 3;
-  -ms-grid-row-span: 2;
-  grid-row: 3 / 5;
+  -ms-grid-row: 1;
+  -ms-grid-column: 4;
+  -ms-grid-column-span: 2;
+  grid-area: h2;
   padding: 20px 10px;
   text-transform: uppercase;
   font-size: calc(1.5rem + 1vw);
@@ -387,24 +385,24 @@ header li:first-child, header li:nth-child(3) {
 }
 
 header .small-box {
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 1;
-  grid-column: 1 / 2;
   -ms-grid-row: 3;
-  -ms-grid-row-span: 2;
-  grid-row: 3 / 5;
+  -ms-grid-column: 1;
+  grid-area: small-box;
   background: linear-gradient(67deg, rgba(141, 227, 247, 0.3) 0%, rgba(208, 255, 225, 0.3) 100%);
 }
 
 header .big-box {
-  -ms-grid-row: 2;
-  -ms-grid-row-span: 3;
-  grid-row: 2 / 5;
+  -ms-grid-row: 3;
+  -ms-grid-column: 3;
+  grid-area: big-box;
   background: linear-gradient(67deg, rgba(141, 227, 247, 0.3) 0%, rgba(208, 255, 225, 0.3) 100%);
 }
 
 header .long-box {
-  grid-column: 1 / -1;
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-area: long-box;
   border-top: 0.5px solid #707070;
 }
 
@@ -438,29 +436,44 @@ header .long-box {
       grid-template-columns: 10rem 1.3fr 2fr;
   -ms-grid-rows: 7rem 5rem 1fr 5rem;
       grid-template-rows: 7rem 5rem 1fr 5rem;
+      grid-template-areas: "long-box   long-box    long-box" ".          skills      currently-learning" ".          skills      big-box" ".          skills      currently-building";
   border-bottom: 0.5px solid #707070;
 }
 
 .skills .long-box {
+  -ms-grid-row: 1;
   -ms-grid-column: 1;
   -ms-grid-column-span: 3;
-  grid-column: 1 / 4;
+  grid-area: long-box;
   padding: 10px 110px;
   border-bottom: 0.5px solid #707070;
-}
-
-.skills .tall-box {
-  -ms-grid-row: 2;
-  -ms-grid-row-span: 3;
-  grid-row: 2 / 5;
-  border-right: 0.5px solid #707070;
 }
 
 .skills ul {
   -ms-grid-row: 2;
   -ms-grid-row-span: 3;
-  grid-row: 2 / 5;
+  -ms-grid-column: 2;
+  grid-area: skills;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   padding: 20px;
+  border-left: 0.5px solid #707070;
+}
+
+.skills li {
+  margin: 12px;
+}
+
+.skills li img {
+  height: calc(6rem + 1vw);
 }
 
 .skills .currently-learning,
@@ -470,14 +483,22 @@ header .long-box {
   padding: 13px 15px;
 }
 
+.skills .currently-learning {
+  -ms-grid-row: 2;
+  -ms-grid-column: 3;
+  grid-area: currently-learning;
+}
+
 .skills .currently-building {
-  grid-column: -2 / -1;
+  -ms-grid-row: 4;
+  -ms-grid-column: 3;
+  grid-area: currently-building;
 }
 
 .skills .middle {
+  -ms-grid-row: 3;
   -ms-grid-column: 3;
-  -ms-grid-column-span: 1;
-  grid-column: 3 / 4;
+  grid-area: big-box;
   height: 50vh;
   border: 0.5px solid #707070;
   border-right: none;
@@ -504,13 +525,13 @@ header .long-box {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  margin: 2.5rem;
 }
 
 .portfolio .project {
-  margin: 5rem;
+  margin: 2.5rem;
   height: 35vh;
   width: calc(100% / 2 - 20rem);
-  max-width: 550px;
   min-width: 400px;
   border: 0.5px solid #707070;
 }
@@ -527,33 +548,31 @@ header .long-box {
       grid-template-columns: 0.1fr 1.1fr 0.1fr 1fr 0.1fr;
   -ms-grid-rows: 7rem 1fr 1fr 1fr 7rem 7rem;
       grid-template-rows: 7rem 1fr 1fr 1fr 7rem 7rem;
+      grid-template-areas: "long-box long-box long-box h2 h2" ".      .       .   form    ." ".  social      .   form    ." ".  social   .   form    ." ".      .       .       form    .";
 }
 
 .contact .long-box {
+  -ms-grid-row: 1;
   -ms-grid-column: 1;
   -ms-grid-column-span: 3;
-  grid-column: 1 /4;
+  grid-area: long-box;
   border-bottom: 0.5px solid #707070;
 }
 
 .contact h2 {
+  -ms-grid-row: 1;
   -ms-grid-column: 4;
   -ms-grid-column-span: 2;
-  grid-column: 4 / 6;
-  -ms-grid-row: 1;
-  -ms-grid-row-span: 1;
-  grid-row: 1 / 2;
+  grid-area: h2;
   padding: 10px;
   border-bottom: 0.5px solid #707070;
 }
 
 .contact .social {
-  -ms-grid-column: 2;
-  -ms-grid-column-span: 1;
-  grid-column: 2 / 3;
   -ms-grid-row: 3;
   -ms-grid-row-span: 2;
-  grid-row: 3 / 5;
+  -ms-grid-column: 2;
+  grid-area: social;
   border-top: 0.5px solid #707070;
   border-right: 0.5px solid #707070;
 }
@@ -581,12 +600,10 @@ header .long-box {
 }
 
 form {
-  -ms-grid-column: 4;
-  -ms-grid-column-span: 1;
-  grid-column: 4 / 5;
   -ms-grid-row: 2;
   -ms-grid-row-span: 4;
-  grid-row: 2 / 6;
+  -ms-grid-column: 4;
+  grid-area: form;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
