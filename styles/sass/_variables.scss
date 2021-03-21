@@ -21,3 +21,6 @@ $headingFont: 'Sequenz-M-I';
 $headingFontI: 'Sequenz-M-I', sans-serif;
 $bodyFont: 'Overpass', sans-serif;
 
+@mixin transition {
+    transition: all 0.5s ease-in-out;
+}

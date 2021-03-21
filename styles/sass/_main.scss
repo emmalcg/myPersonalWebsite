@@ -25,8 +25,11 @@ ul {
 a {
     text-transform: uppercase;
     text-decoration: none;
-    color: $primaryColor;
+}
 
+ul a {
+    color: $primaryColor;
+    
     &:hover,
     &:focus {
         color: white;
@@ -36,6 +39,7 @@ a {
         font-weight: 600;
     }
 }
+
 
 main h2 {
     font-family: $headingFont;
@@ -88,17 +92,19 @@ header {
         text-align: center;
         padding: 10px;
     
-        font-family: $headingFontI;
-        text-transform: uppercase;
-        font-size: calc(3rem + 3vw);
-        letter-spacing: 8px;
-        color: white;
-        -webkit-text-stroke-width: 1px;
-        -webkit-text-stroke-color: $primaryColor;
-    
         border: 0.5px solid $primaryColor;
         border-left: none;
         border-top: none;
+
+        a {
+            font-family: $headingFontI;
+            font-size: calc(3rem + 3vw);
+            letter-spacing: 8px;
+            color: white;
+            -webkit-text-stroke-width: 1px;
+            -webkit-text-stroke-color: $primaryColor;
+
+        }
     }
 
     h2 {
@@ -139,7 +145,7 @@ header {
         width: 50%;
         padding-right: 15px;
     
-        font-size: calc(1.9rem + 0.5vw);
+        font-size: calc(1.6rem + 0.5vw);
         letter-spacing:1px;
         font-weight: 400;
     
@@ -396,4 +402,43 @@ footer {
     font-size: 1.6rem;
 
     border-top: 0.5px solid $primaryColor;
+}
+
+//burger menu
+
+.burger {
+    cursor: pointer;
+    display: none;
+    position: absolute;
+    z-index: 100;
+    top: 2rem;
+    right: 5rem;
+    transform-origin: center;
+    @include transition;
+
+    div {
+        width: 2rem;
+        height: 2rem;
+        border-radius: 50%;
+        border: 0.5px solid $primaryColor;
+        background: $gradientOne;
+        margin: 6px 0;
+    }
+}
+
+.burger.open {
+    transform: rotate(90deg);
+}
+
+
+//animation for navigation links to come in 
+@keyframes navLinkFade {
+    from{
+        opacity: 0;
+        translateY: 50px;
+    }
+    to{
+        opacity: 1;
+        translateY: 0px;
+    }
 }
