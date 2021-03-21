@@ -278,8 +278,8 @@ main h2 {
   font-size: 5rem;
   letter-spacing: 2px;
   color: #F5F5F5;
-  -webkit-text-stroke-width: 0.5px;
-  -webkit-text-stroke-color: #575757;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #707070;
 }
 
 h3 {
@@ -288,6 +288,15 @@ h3 {
   font-size: 2.5rem;
   letter-spacing: 2px;
   font-weight: 400;
+}
+
+.long-box {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-area: long-box;
+  padding: 10px 110px;
+  border-bottom: 0.5px solid #707070;
 }
 
 header {
@@ -301,7 +310,6 @@ header {
   height: 70vh;
   min-height: 500px;
   max-height: 660px;
-  border-bottom: 1px solid #707070;
 }
 
 header h1 {
@@ -326,8 +334,8 @@ header h1 {
   font-size: calc(3rem + 3vw);
   letter-spacing: 8px;
   color: transparent;
-  -webkit-text-stroke-width: 0.5px;
-  -webkit-text-stroke-color: #3d3d3d;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #707070;
   border: 0.5px solid #707070;
   border-left: none;
   border-top: none;
@@ -410,23 +418,24 @@ header .long-box {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
   border-bottom: 0.5px solid #707070;
 }
 
 .about div {
-  height: auto;
   width: 50%;
-}
-
-.about div:first-child {
-  border-right: 0.5px solid #707070;
+  min-width: 550px;
+  border-left: 0.5px solid #707070;
 }
 
 .about p {
   font-size: 1.8rem;
   letter-spacing: 0.8px;
   font-weight: 300;
-  margin: 30px 150px 30px 30px;
+  margin: 30px;
+  margin-right: 12vw;
 }
 
 .skills {
@@ -437,15 +446,6 @@ header .long-box {
   -ms-grid-rows: 7rem 5rem 1fr 5rem;
       grid-template-rows: 7rem 5rem 1fr 5rem;
       grid-template-areas: "long-box   long-box    long-box" ".          skills      currently-learning" ".          skills      big-box" ".          skills      currently-building";
-  border-bottom: 0.5px solid #707070;
-}
-
-.skills .long-box {
-  -ms-grid-row: 1;
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 3;
-  grid-area: long-box;
-  padding: 10px 110px;
   border-bottom: 0.5px solid #707070;
 }
 
@@ -473,7 +473,7 @@ header .long-box {
 }
 
 .skills li img {
-  height: calc(6rem + 1vw);
+  height: calc(4rem + 3vw);
 }
 
 .skills .currently-learning,
@@ -512,8 +512,6 @@ header .long-box {
 .portfolio .long-box {
   width: 100%;
   height: 7rem;
-  padding: 10px 110px;
-  border-bottom: 0.5px solid #707070;
 }
 
 .portfolio .project-container {
@@ -556,7 +554,6 @@ header .long-box {
   -ms-grid-column: 1;
   -ms-grid-column-span: 3;
   grid-area: long-box;
-  border-bottom: 0.5px solid #707070;
 }
 
 .contact h2 {
@@ -718,7 +715,25 @@ button:hover, button:focus {
   }
 }
 
+@media (max-width: 850px) {
+  .long-box {
+    padding: 10px 60px;
+  }
+  .skills {
+        grid-template-areas: "long-box   long-box    long-box" "skills          skills      currently-learning" "skills          skills      big-box" "skills          skills      currently-building";
+  }
+}
+
 @media (max-width: 768px) {
+  header {
+    -ms-grid-columns: 0.7fr 1.3fr 1.5fr;
+        grid-template-columns: 0.7fr 1.3fr 1.5fr;
+    -ms-grid-rows: 0.7fr 2fr 2fr 7rem;
+        grid-template-rows: 0.7fr 2fr 2fr 7rem;
+  }
+  header h2 {
+    padding: 30px 20px;
+  }
   .contact {
     -ms-grid-columns: 2rem 0.7fr 2rem 1fr 2rem;
         grid-template-columns: 2rem 0.7fr 2rem 1fr 2rem;
@@ -729,5 +744,11 @@ button:hover, button:focus {
   }
   .contact .social li:last-of-type {
     grid-column: span 1;
+  }
+}
+
+@media (max-width: 550px) {
+  .about div {
+    min-width: 100%;
   }
 }
