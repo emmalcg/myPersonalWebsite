@@ -45,7 +45,7 @@
             padding: 30px 20px;
         }
     }
-    
+
     .skills {
         grid-template-areas:
         "long-box   long-box    long-box"
@@ -54,6 +54,11 @@
         "skills          skills      currently-building";
     }
 
+    .portfolio {
+        .project {
+            width: 70%;
+        }
+    }
 
     .contact {
         grid-template-columns: 2rem 0.7fr 2rem 1fr 2rem;
