@@ -110,10 +110,22 @@
 
         <section class="contact">
             <div class="long-box">
-
+                <h2>Contact</h2>
             </div>
-            <h2>Contact</h2>
             
+            <form action="submit">
+                <legend class="sr-only">Send me a message to get in touch</legend>
+                <label for="name" class="sr-only">Enter your name</label>
+                <input type="text" id="name" name="name" placeholder="Name">
+                
+                <label for="email" class="sr-only">Enter your email</label>
+                <input type="email" id="email" name="email" placeholder="Email">
+                
+                <label for="message" class="sr-only">Enter your message</label>
+                <textarea name="message" id="message"  placeholder="Message"></textarea>
+                
+                <button type="submit" class="submit-button">Submit</button>
+            </form>
             <section class="social">
                 <ul>
                 <li><a href="#">Email</a></li>
@@ -126,19 +138,6 @@
                 <li><a href="#">LinkedIn</a></li>
                 </ul>
             </section>
-            <form action="submit">
-                <legend class="sr-only">Send me a message to get in touch</legend>
-                <label for="name" class="sr-only">Enter your name</label>
-                <input type="text" id="name" name="name" placeholder="Name">
-        
-                <label for="email" class="sr-only">Enter your email</label>
-                <input type="email" id="email" name="email" placeholder="Email">
-
-                <label for="message" class="sr-only">Enter your message</label>
-                <textarea name="message" id="message"  placeholder="Message"></textarea>
-
-                <button type="submit" class="submit-button">Submit</button>
-            </form>
         </section>
     </main>
     <footer>

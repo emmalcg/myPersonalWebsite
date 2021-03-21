@@ -6,9 +6,18 @@
 
 @media (max-width: 1200px) {
 
+    form {
+        margin-top: 0;
+    }
     .contact {
-        grid-template-columns: 0.1fr 1fr 0.1fr 1fr 0.1fr;
+        grid-template-columns: 10rem 1fr 0.1fr 0.9fr 0.1fr;
         grid-template-rows: 7rem 3rem 1fr 1fr 1fr 7rem 7rem;
+        grid-template-areas: 
+        "long-box long-box long-box long-box long-box"
+        ".      .       .   .    ."
+        ".  form      .   social    ."
+        ".  form   .   social    ."
+        ".      form       .       .    .";
 
         .social {
 
@@ -23,18 +32,12 @@
             }
         }
     }
-
-    form {
-        grid-row: 3 / 6;
-
-        border-top: 0.5px solid $primaryColor;
-    }
 }
 
 @media (max-width: 850px) {
 
     .long-box { 
-        padding: 10px 60px;
+        padding: 1rem 6rem;
     }
 
     .skills {
@@ -52,7 +55,7 @@
     }
 
     .contact {
-        grid-template-columns: 2rem 0.7fr 2rem 1fr 2rem;
+        grid-template-columns: 6rem 1fr 2rem 0.7fr 2rem;
 
         .social {
 
@@ -84,6 +87,11 @@
 }
 
 @media (max-width: 600px) {
+
+    .long-box {
+        padding: 1rem 2rem;
+    }
+
     .skills {
         grid-template-rows: 7rem 1fr 5rem 0.7fr 5rem;
         grid-template-areas: 
@@ -100,24 +108,36 @@
 
     .contact {
         grid-template-columns: 1fr;
-        // grid-template-columns: 0.1fr 1.1fr 0.1fr 1fr 0.1fr;
-        grid-template-rows: 7rem 1fr 7rem 1fr 7rem;
-        // grid-template-areas: 
-        // "h2     h2      h2      h2      h2"
-        // ".  form    form    form    ."
-        // ".      form        form        form      ."
-        // ".  social   social     social    ."
-        // ".      .       .       .    .";
+        grid-template-rows: 7rem 1.7fr 1fr 7rem;
 
-        grid-auto-flow: row;
+        grid-template-areas: 
+        "long-box"
+        "form"
+        "social"
+        ".";
 
-        .long-box {
-            display: none;
+
+        .social {
+            margin: 0 2rem 2rem 2rem;
+
+            li {
+                height: 8rem
+            }
         }
+
     }
+
+    form {
+        margin: 2rem;
+    }
+
+
 }
 
 @media(max-width: 550px) {
+    header {
+        grid-template-columns: 0.5fr 1fr 0.5fr;
+    }
     .about {
         div {
             min-width: 100%;

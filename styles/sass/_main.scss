@@ -217,13 +217,13 @@ header {
         justify-content: space-around;
         align-items: center;
 
-        padding: 20px;
+        padding: 2rem;
 
         border-left: 0.5px solid $primaryColor;
     }
 
     li {
-        margin: 12px;
+        margin: 2rem;
         
         img {
             height: calc(4rem + 3vw);
@@ -292,27 +292,19 @@ header {
 
 .contact {
     display: grid;
-    grid-template-columns: 0.1fr 1.1fr 0.1fr 1fr 0.1fr;
+    grid-template-columns: 10rem 1fr 0.1fr 1.1fr 0.1fr;
     grid-template-rows: 7rem 1fr 1fr 1fr 7rem 7rem;
     grid-template-areas: 
-    "long-box long-box long-box h2 h2"
-    ".      .       .   form    ."
-    ".  social      .   form    ."
-    ".  social   .   form    ."
-    ".      .       .       form    .";
+    "long-box long-box long-box long-box long-box"
+    ".      form       .   .    ."
+    ".  form      .   social    ."
+    ".  form   .   social    ."
+    ".      form       .       .    .";
 
 
     .long-box {
         grid-area: long-box;
     }
-
-    h2 {
-        grid-area: h2;
-
-        padding: 10px;
-
-        border-bottom: 0.5px solid $primaryColor;
-        }
 
     .social {
         grid-area: social;
@@ -326,7 +318,7 @@ header {
         }
 
         li {
-            height: 150px;
+            height: 15rem;
 
             border-bottom: 0.5px solid $primaryColor;
             border-left: 0.5px solid $primaryColor;
@@ -335,7 +327,7 @@ header {
         }
 
         a {
-        font-size: calc(1.4rem + 1vw);
+        font-size: calc(1.5rem + 0.5vw);
         letter-spacing: 2px;
         margin: auto;
         }
@@ -345,15 +337,15 @@ header {
 
 
 form {
-    grid-area:form;
+    grid-area: form;
 
     display: flex;
     flex-direction: column;
 
-    font-size: calc(1.4rem + 1vw);
+    font-size: calc(1.5rem + 0.5vw);
 
     border: 0.5px solid $primaryColor;
-    border-top: none;
+    margin-top: 15px;
 }
 
 input,
@@ -380,13 +372,11 @@ textarea {
 button {
     font-family: $headingFont;
     text-transform: uppercase;
-    font-size: 4.5rem;
+    font-size: calc(3rem + 1vw);
     text-align: left;
-    padding: 13px;
+    padding: 13px 13px 7px 13px;
     color: $primaryColor;
     background: $offWhite;
-
-    height: 7rem;
 
     border: none;
 

@@ -293,7 +293,7 @@ h3 {
 .long-box {
   -ms-grid-row: 1;
   -ms-grid-column: 1;
-  -ms-grid-column-span: 3;
+  -ms-grid-column-span: 5;
   grid-area: long-box;
   padding: 10px 110px;
   border-bottom: 0.5px solid #707070;
@@ -342,9 +342,8 @@ header h1 {
 }
 
 header h2 {
-  -ms-grid-row: 1;
-  -ms-grid-column: 4;
-  -ms-grid-column-span: 2;
+  -ms-grid-row: 3;
+  -ms-grid-column: 2;
   grid-area: h2;
   padding: 30px 20px;
   text-transform: uppercase;
@@ -415,7 +414,7 @@ header .big-box {
 header .long-box {
   -ms-grid-row: 1;
   -ms-grid-column: 1;
-  -ms-grid-column-span: 3;
+  -ms-grid-column-span: 5;
   grid-area: long-box;
   border-top: 0.5px solid #707070;
 }
@@ -470,12 +469,12 @@ header .long-box {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 20px;
+  padding: 2rem;
   border-left: 0.5px solid #707070;
 }
 
 .skills li {
-  margin: 12px;
+  margin: 2rem;
 }
 
 .skills li img {
@@ -548,33 +547,24 @@ header .long-box {
 .contact {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 0.1fr 1.1fr 0.1fr 1fr 0.1fr;
-      grid-template-columns: 0.1fr 1.1fr 0.1fr 1fr 0.1fr;
+  -ms-grid-columns: 10rem 1fr 0.1fr 1.1fr 0.1fr;
+      grid-template-columns: 10rem 1fr 0.1fr 1.1fr 0.1fr;
   -ms-grid-rows: 7rem 1fr 1fr 1fr 7rem 7rem;
       grid-template-rows: 7rem 1fr 1fr 1fr 7rem 7rem;
-      grid-template-areas: "long-box long-box long-box h2 h2" ".      .       .   form    ." ".  social      .   form    ." ".  social   .   form    ." ".      .       .       form    .";
+      grid-template-areas: "long-box long-box long-box long-box long-box" ".      form       .   .    ." ".  form      .   social    ." ".  form   .   social    ." ".      form       .       .    .";
 }
 
 .contact .long-box {
   -ms-grid-row: 1;
   -ms-grid-column: 1;
-  -ms-grid-column-span: 3;
+  -ms-grid-column-span: 5;
   grid-area: long-box;
-}
-
-.contact h2 {
-  -ms-grid-row: 1;
-  -ms-grid-column: 4;
-  -ms-grid-column-span: 2;
-  grid-area: h2;
-  padding: 10px;
-  border-bottom: 0.5px solid #707070;
 }
 
 .contact .social {
   -ms-grid-row: 3;
   -ms-grid-row-span: 2;
-  -ms-grid-column: 2;
+  -ms-grid-column: 4;
   grid-area: social;
   border-top: 0.5px solid #707070;
   border-right: 0.5px solid #707070;
@@ -588,7 +578,7 @@ header .long-box {
 }
 
 .contact .social li {
-  height: 150px;
+  height: 15rem;
   border-bottom: 0.5px solid #707070;
   border-left: 0.5px solid #707070;
   display: -webkit-box;
@@ -597,7 +587,7 @@ header .long-box {
 }
 
 .contact .social a {
-  font-size: calc(1.4rem + 1vw);
+  font-size: calc(1.5rem + 0.5vw);
   letter-spacing: 2px;
   margin: auto;
 }
@@ -605,7 +595,7 @@ header .long-box {
 form {
   -ms-grid-row: 2;
   -ms-grid-row-span: 4;
-  -ms-grid-column: 4;
+  -ms-grid-column: 2;
   grid-area: form;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -614,9 +604,9 @@ form {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  font-size: calc(1.4rem + 1vw);
+  font-size: calc(1.5rem + 0.5vw);
   border: 0.5px solid #707070;
-  border-top: none;
+  margin-top: 15px;
 }
 
 input,
@@ -645,12 +635,11 @@ textarea {
 button {
   font-family: "Sequenz-M-I";
   text-transform: uppercase;
-  font-size: 4.5rem;
+  font-size: calc(3rem + 1vw);
   text-align: left;
-  padding: 13px;
+  padding: 13px 13px 7px 13px;
   color: #707070;
   background: #F5F5F5;
-  height: 7rem;
   border: none;
 }
 
@@ -702,11 +691,15 @@ footer {
 }
 
 @media (max-width: 1200px) {
+  form {
+    margin-top: 0;
+  }
   .contact {
-    -ms-grid-columns: 0.1fr 1fr 0.1fr 1fr 0.1fr;
-        grid-template-columns: 0.1fr 1fr 0.1fr 1fr 0.1fr;
+    -ms-grid-columns: 10rem 1fr 0.1fr 0.9fr 0.1fr;
+        grid-template-columns: 10rem 1fr 0.1fr 0.9fr 0.1fr;
     -ms-grid-rows: 7rem 3rem 1fr 1fr 1fr 7rem 7rem;
         grid-template-rows: 7rem 3rem 1fr 1fr 1fr 7rem 7rem;
+        grid-template-areas: "long-box long-box long-box long-box long-box" ".      .       .   .    ." ".  form      .   social    ." ".  form   .   social    ." ".      form       .       .    .";
   }
   .contact .social {
     -ms-grid-row: 3;
@@ -720,17 +713,11 @@ footer {
   .contact .social li:last-of-type {
     grid-column: span 2;
   }
-  form {
-    -ms-grid-row: 3;
-    -ms-grid-row-span: 3;
-    grid-row: 3 / 6;
-    border-top: 0.5px solid #707070;
-  }
 }
 
 @media (max-width: 850px) {
   .long-box {
-    padding: 10px 60px;
+    padding: 1rem 6rem;
   }
   .skills {
         grid-template-areas: "long-box   long-box    long-box" "skills          skills      currently-learning" "skills          skills      big-box" "skills          skills      currently-building";
@@ -739,8 +726,8 @@ footer {
     width: 70%;
   }
   .contact {
-    -ms-grid-columns: 2rem 0.7fr 2rem 1fr 2rem;
-        grid-template-columns: 2rem 0.7fr 2rem 1fr 2rem;
+    -ms-grid-columns: 6rem 1fr 2rem 0.7fr 2rem;
+        grid-template-columns: 6rem 1fr 2rem 0.7fr 2rem;
   }
   .contact .social ul {
     -ms-grid-columns: (1fr)[2];
@@ -763,6 +750,9 @@ footer {
 }
 
 @media (max-width: 600px) {
+  .long-box {
+    padding: 1rem 2rem;
+  }
   .skills {
     -ms-grid-rows: 7rem 1fr 5rem 0.7fr 5rem;
         grid-template-rows: 7rem 1fr 5rem 0.7fr 5rem;
@@ -774,16 +764,26 @@ footer {
   .contact {
     -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
-    -ms-grid-rows: 7rem 1fr 7rem 1fr 7rem;
-        grid-template-rows: 7rem 1fr 7rem 1fr 7rem;
-    grid-auto-flow: row;
+    -ms-grid-rows: 7rem 1.7fr 1fr 7rem;
+        grid-template-rows: 7rem 1.7fr 1fr 7rem;
+        grid-template-areas: "long-box" "form" "social" ".";
   }
-  .contact .long-box {
-    display: none;
+  .contact .social {
+    margin: 0 2rem 2rem 2rem;
+  }
+  .contact .social li {
+    height: 8rem;
+  }
+  form {
+    margin: 2rem;
   }
 }
 
 @media (max-width: 550px) {
+  header {
+    -ms-grid-columns: 0.5fr 1fr 0.5fr;
+        grid-template-columns: 0.5fr 1fr 0.5fr;
+  }
   .about div {
     min-width: 100%;
   }
