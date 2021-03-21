@@ -285,7 +285,7 @@ main h2 {
 h3 {
   font-family: "Overpass", sans-serif;
   text-transform: uppercase;
-  font-size: 2.5rem;
+  font-size: calc(1.5rem + 1vw);
   letter-spacing: 2px;
   font-weight: 400;
 }
@@ -361,7 +361,13 @@ header h2 span {
   display: block;
 }
 
-header ul {
+header nav {
+  -ms-grid-row: 1;
+  -ms-grid-column: 3;
+  grid-area: nav;
+}
+
+header nav ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -499,7 +505,7 @@ header .long-box {
   -ms-grid-row: 3;
   -ms-grid-column: 3;
   grid-area: big-box;
-  height: 50vh;
+  height: 100%;
   border: 0.5px solid #707070;
   border-right: none;
   background: linear-gradient(67deg, rgba(141, 227, 247, 0.3) 0%, rgba(208, 255, 225, 0.3) 100%);
@@ -722,18 +728,6 @@ footer {
   }
 }
 
-@media (max-width: 950px) {
-  header {
-    -ms-grid-columns: 0.7fr 1.3fr 1.5fr;
-        grid-template-columns: 0.7fr 1.3fr 1.5fr;
-    -ms-grid-rows: 0.7fr 2fr 2fr 7rem;
-        grid-template-rows: 0.7fr 2fr 2fr 7rem;
-  }
-  header h2 {
-    padding: 30px 20px;
-  }
-}
-
 @media (max-width: 850px) {
   .long-box {
     padding: 10px 60px;
@@ -754,6 +748,38 @@ footer {
   }
   .contact .social li:last-of-type {
     grid-column: span 1;
+  }
+}
+
+@media (max-width: 750px) {
+  header {
+    -ms-grid-columns: 1.5fr 1fr 1fr;
+        grid-template-columns: 1.5fr 1fr 1fr;
+        grid-template-areas: "nav     nav      nav" "header     header      big-box" "small-box   h2      h2" "long-box       long-box        long-box";
+  }
+  header .big-box {
+    border-bottom: 0.5px solid #707070;
+  }
+}
+
+@media (max-width: 600px) {
+  .skills {
+    -ms-grid-rows: 7rem 1fr 5rem 0.7fr 5rem;
+        grid-template-rows: 7rem 1fr 5rem 0.7fr 5rem;
+        grid-template-areas: "long-box   long-box    long-box" "skills     skills      skills" "currently-learning     currently-learning      currently-learning" "big-box          big-box      big-box" "currently-building     currently-building      currently-building";
+  }
+  .skills .currently-learning {
+    border-top: 0.5px solid #707070;
+  }
+  .contact {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    -ms-grid-rows: 7rem 1fr 7rem 1fr 7rem;
+        grid-template-rows: 7rem 1fr 7rem 1fr 7rem;
+    grid-auto-flow: row;
+  }
+  .contact .long-box {
+    display: none;
   }
 }
 

@@ -31,23 +31,11 @@
     }
 }
 
-@media (max-width: 950px) {
-    header {
-        grid-template-columns: 0.7fr 1.3fr 1.5fr;
-        grid-template-rows: 0.7fr 2fr 2fr 7rem;
-
-        h2 {
-            padding: 30px 20px;
-        }
-    }
-}
-
 @media (max-width: 850px) {
 
-    .long-box {
+    .long-box { 
         padding: 10px 60px;
     }
-
 
     .skills {
         grid-template-areas:
@@ -79,33 +67,57 @@
     }
 }
 
-// @media (max-width: 790px) {
-//     header {
-//         grid-template-columns: 0.7fr 1.3fr 1.5fr;
-//         grid-template-rows: 0.7fr 2fr 2fr 7rem;
+@media (max-width: 750px) {
+    header {
+        grid-template-columns: 1.5fr 1fr 1fr;
 
-//         h2 {
-//             padding: 30px 20px;
-//         }
-//     }
+        grid-template-areas: 
+        "nav     nav      nav"
+        "header     header      big-box"
+        "small-box   h2      h2"
+        "long-box       long-box        long-box";
 
-//     .contact {
-//         grid-template-columns: 2rem 0.7fr 2rem 1fr 2rem;
+        .big-box {
+            border-bottom: 0.5px solid $primaryColor;
+        }
+    }
+}
 
-//         .social {
+@media (max-width: 600px) {
+    .skills {
+        grid-template-rows: 7rem 1fr 5rem 0.7fr 5rem;
+        grid-template-areas: 
+        "long-box   long-box    long-box"
+        "skills     skills      skills"
+        "currently-learning     currently-learning      currently-learning"
+        "big-box          big-box      big-box"
+        "currently-building     currently-building      currently-building";
 
-//             ul {
-//                 grid-template-columns: repeat(2, 1fr);
-//             }
+        .currently-learning {
+            border-top: 0.5px solid $primaryColor;
+        }
+    }
 
-//             li:last-of-type {
-//                 grid-column: span 1;
-//             }
-//         }
-//     }
-// }
+    .contact {
+        grid-template-columns: 1fr;
+        // grid-template-columns: 0.1fr 1.1fr 0.1fr 1fr 0.1fr;
+        grid-template-rows: 7rem 1fr 7rem 1fr 7rem;
+        // grid-template-areas: 
+        // "h2     h2      h2      h2      h2"
+        // ".  form    form    form    ."
+        // ".      form        form        form      ."
+        // ".  social   social     social    ."
+        // ".      .       .       .    .";
 
-@media (max-width: 550px) {
+        grid-auto-flow: row;
+
+        .long-box {
+            display: none;
+        }
+    }
+}
+
+@media(max-width: 550px) {
     .about {
         div {
             min-width: 100%;

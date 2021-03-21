@@ -50,7 +50,7 @@ main h2 {
 h3 {
     font-family: $bodyFont;
     text-transform: uppercase;
-    font-size: 2.5rem;
+    font-size: calc(1.5rem + 1vw);
     letter-spacing: 2px;
     font-weight: 400;
 }
@@ -72,7 +72,7 @@ header {
     "header     header      nav"
     "header     header      big-box"
     "small-box   h2      big-box"
-    "long-box       long-box        long-box"      ;
+    "long-box       long-box        long-box";
 
     height: 70vh;
     min-height: 500px;
@@ -121,11 +121,16 @@ header {
         }
     }
 
-    ul {
-        display: flex;
-        flex-wrap: wrap;
-        height: 100%;
+    nav {
+        grid-area: nav;
+
+        ul {
+            display: flex;
+            flex-wrap: wrap;
+            height: 100%;
+        }
     }
+
 
     li {
         display: flex;
@@ -204,14 +209,6 @@ header {
 
     border-bottom: 0.5px solid $primaryColor;
 
-    // .long-box {
-    //     grid-area: long-box;
-
-    //     padding: 10px 110px;
-    //     border-bottom: 0.5px solid $primaryColor;
-    // }
-
-
     ul {
         grid-area: skills;
 
@@ -250,7 +247,7 @@ header {
     
     .middle {
         grid-area: big-box;
-        height: 50vh;
+        height: 100%;
         
         border: 0.5px solid $primaryColor;
         border-right: none;
