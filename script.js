@@ -14,9 +14,10 @@ const navSlide = () => {
     const stickyHeader= () => {
         if (window.scrollY >= h1Top && mq.matches) {
             h1El.classList.add('fixed-h1');
-
+            navUlEl.classList.add('fixed-nav');
         } else {
             h1El.classList.remove('fixed-h1');
+            navUlEl.classList.remove('fixed-nav');
         }
     }
 
