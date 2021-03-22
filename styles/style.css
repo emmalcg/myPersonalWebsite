@@ -262,6 +262,7 @@ ul {
 a {
   text-transform: uppercase;
   text-decoration: none;
+  font-weight: 600;
 }
 
 ul a {
@@ -272,7 +273,6 @@ ul a:hover, ul a:focus {
   color: white;
   -webkit-text-stroke-width: 1px;
   -webkit-text-stroke-color: #575757;
-  font-weight: 600;
 }
 
 main h2 {
@@ -352,7 +352,7 @@ header h2 {
   grid-area: h2;
   padding: 30px 20px;
   text-transform: uppercase;
-  font-size: calc(1.5rem + 1vw);
+  font-size: calc(1.8rem + 0.8vw);
   font-weight: 300;
   letter-spacing: 1.5px;
   line-height: calc(2.5rem + 1vw);
@@ -624,7 +624,7 @@ textarea {
 input:hover, input:focus,
 textarea:hover,
 textarea:focus {
-  background: linear-gradient(67deg, rgba(141, 227, 247, 0.3) 0%, rgba(208, 255, 225, 0.3) 100%);
+  background: linear-gradient(67deg, #8de3f7 0%, #d0ffe1 100%);
 }
 
 textarea {
@@ -699,13 +699,23 @@ footer {
   transition: all 0.5s ease-in-out;
 }
 
+.burger:hover div {
+  background: linear-gradient(67deg, #8de3f7 0%, #d0ffe1 100%);
+}
+
 .burger div {
   width: 1.3rem;
   height: 1.3rem;
   border-radius: 50%;
   border: 0.5px solid #707070;
-  background: linear-gradient(67deg, rgba(141, 227, 247, 0.3) 0%, rgba(208, 255, 225, 0.3) 100%);
+  background-color: white;
   margin: 6px 0;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+.burger div.blue {
+  background: linear-gradient(67deg, #8de3f7 0%, #d0ffe1 100%);
 }
 
 .burger.open {
@@ -801,6 +811,10 @@ footer {
         -ms-flex-align: start;
             align-items: start;
     padding: 3rem;
+    border-right: none;
+  }
+  header h2 {
+    border-right: none;
   }
   header ul {
     -webkit-box-orient: vertical;
@@ -814,7 +828,7 @@ footer {
     height: 100vh;
     width: 100vw;
     padding-top: 10rem;
-    background: cornsilk;
+    background-color: #fbffe3;
     opacity: 98%;
     -webkit-transform: translateY(-100%);
             transform: translateY(-100%);
@@ -832,6 +846,10 @@ footer {
   }
   header ul li:first-child {
     border-top: 0.5px solid #707070;
+    border-right: none;
+  }
+  header ul li:nth-child(3) {
+    border-right: none;
   }
   header .nav-open {
     -webkit-transform: translateY(0%);
@@ -868,6 +886,9 @@ footer {
   .contact .social li {
     height: 8rem;
   }
+  .contact .social li a {
+    font-size: 2.2rem;
+  }
   form {
     margin: 2rem;
   }
@@ -889,10 +910,6 @@ footer {
   .burger {
     top: 1rem;
     right: 2rem;
-  }
-  .burger div {
-    width: 1.3rem;
-    height: 1.3rem;
   }
   .about div {
     min-width: 100%;

@@ -82,6 +82,12 @@
             justify-content: start;
             align-items: start;
             padding: 3rem;
+
+            border-right: none;
+        }
+        
+        h2 {
+            border-right: none;
         }
 
         ///navigation 
@@ -95,7 +101,7 @@
             width: 100vw;
             padding-top: 10rem;
 
-            background: cornsilk;
+            background-color: #fbffe3;
             opacity: 98%;
             transform: translateY(-100%);
             @include transition;
@@ -109,6 +115,10 @@
 
                 &:first-child {
                     border-top: 0.5px solid $primaryColor;
+                    border-right: none;
+                }
+                &:nth-child(3) {
+                    border-right: none;
                 }
             }
         }
@@ -159,7 +169,10 @@
             margin: 0 2rem 2rem 2rem;
 
             li {
-                height: 8rem
+                height: 8rem;
+                a {
+                    font-size: 2.2rem;
+                }
             }
         }
 
@@ -189,10 +202,6 @@
         top: 1rem;
         right: 2rem;
 
-        div {
-            width: 1.3rem;
-            height: 1.3rem;
-        }
     }
     .about {
         div {

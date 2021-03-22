@@ -25,6 +25,7 @@ ul {
 a {
     text-transform: uppercase;
     text-decoration: none;
+    font-weight: 600;
 }
 
 ul a {
@@ -36,7 +37,6 @@ ul a {
         -webkit-text-stroke-width: 1px;
         -webkit-text-stroke-color: darken($primaryColor, 10%)
         ;
-        font-weight: 600;
     }
 }
 
@@ -113,7 +113,7 @@ header {
         padding: 30px 20px;
     
         text-transform: uppercase;
-        font-size: calc(1.5rem + 1vw);
+        font-size: calc(1.8rem + 0.8vw);
         font-weight: 300;
         letter-spacing: 1.5px;
         line-height: calc(2.5rem + 1vw);
@@ -415,20 +415,33 @@ footer {
     right: 5rem;
     transform-origin: center;
     @include transition;
+    &:hover {
+            div {
+                background: $gradientOne;
+            }
+        }
 
     div {
         width: 1.3rem;
         height: 1.3rem;
         border-radius: 50%;
         border: 0.5px solid $primaryColor;
-        background: $gradientOne;
+        background-color: white;
         margin: 6px 0;
+        @include transition;
     }
+
+    div.blue {
+        background: $gradientOne;
+            }
+
 }
+
 
 .burger.open {
     transform: rotate(90deg);
 }
+
 
 
 //animation for navigation links to come in 

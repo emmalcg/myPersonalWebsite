@@ -2,6 +2,7 @@ const navSlide = () => {
     const burger = document.querySelector('.burger');
     const mobileNav = document.querySelector('.main-nav');
     const navLi = document.querySelectorAll('.main-nav li');
+    const circle = document.querySelectorAll('.circle');
 
     burger.addEventListener('click', function (){
         //animate burger icon
@@ -9,6 +10,8 @@ const navSlide = () => {
         //have nav appear
         mobileNav.classList.toggle('nav-open');
 
+        circle[0].classList.toggle('blue');
+        circle[1].classList.toggle('blue');
 
         //animate links
     navLi.forEach((link, index)=>{
@@ -19,11 +22,5 @@ const navSlide = () => {
         }
     });
     });
-
-    if (burger.classList.contains('open')) {
-        menuText.innerHTML='close'; 
-    } else {
-        menuText.innerHTML-'menu';
-    }
 }
 navSlide();
