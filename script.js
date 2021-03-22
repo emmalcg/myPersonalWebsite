@@ -1,14 +1,32 @@
 const navSlide = () => {
     const burger = document.querySelector('.burger');
-    const mobileNav = document.querySelector('.main-nav');
+    const navUlEl = document.querySelector('.main-nav');
     const navLi = document.querySelectorAll('.main-nav li');
     const circle = document.querySelectorAll('.circle');
+
+    const h1El = document.querySelector('h1 a');
+    const h1Top = h1El.offsetTop; 
+
+    const mq = window.matchMedia('(min-width: 750px)');
+    console.log(mq);
+
+
+    const stickyHeader= () => {
+        if (window.scrollY >= h1Top && mq.matches) {
+            h1El.classList.add('fixed-h1');
+
+        } else {
+            h1El.classList.remove('fixed-h1');
+        }
+    }
+
+    window.addEventListener('scroll', stickyHeader);
 
     burger.addEventListener('click', function (){
         //animate burger icon
         burger.classList.toggle('open');
         //have nav appear
-        mobileNav.classList.toggle('nav-open');
+        navUlEl.classList.toggle('nav-open');
 
         circle[0].classList.toggle('blue');
         circle[1].classList.toggle('blue');

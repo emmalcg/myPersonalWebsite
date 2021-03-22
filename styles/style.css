@@ -346,6 +346,19 @@ header h1 a {
   -webkit-text-stroke-color: #707070;
 }
 
+header .fixed-h1 {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  font-size: 5rem;
+  text-align: left;
+  padding: 1rem 2rem 0.5rem;
+  background-color: #F5F5F5;
+  width: 100vw;
+  border-bottom: 0.5px solid #707070;
+}
+
 header h2 {
   -ms-grid-row: 3;
   -ms-grid-column: 2;
@@ -689,7 +702,7 @@ footer {
 .burger {
   cursor: pointer;
   display: none;
-  position: absolute;
+  position: fixed;
   z-index: 100;
   top: 3rem;
   right: 5rem;
@@ -811,6 +824,9 @@ footer {
         -ms-flex-align: start;
             align-items: start;
     padding: 3rem;
+    position: fixed;
+    background-color: #F5F5F5;
+    width: 100vw;
     border-right: none;
   }
   header h2 {

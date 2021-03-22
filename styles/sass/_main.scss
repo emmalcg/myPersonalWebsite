@@ -85,7 +85,7 @@ header {
 
     h1 {
         grid-area: header;
-    
+
         display: flex;
         justify-content: center;
         align-items: center;
@@ -104,7 +104,21 @@ header {
             -webkit-text-stroke-width: 1px;
             -webkit-text-stroke-color: $primaryColor;
 
+
         }
+    }
+    
+    .fixed-h1 {
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 1;
+        font-size: 5rem;
+        text-align: left;
+        padding: 1rem 2rem 0.5rem;
+        background-color: $offWhite;
+        width: 100vw;
+        border-bottom: 0.5px solid $primaryColor;
     }
 
     h2 {
@@ -129,6 +143,7 @@ header {
 
     nav {
         grid-area: nav;
+        // position: fixed;
 
         ul {
             display: flex;
@@ -409,7 +424,7 @@ footer {
 .burger {
     cursor: pointer;
     display: none;
-    position: absolute;
+    position: fixed;
     z-index: 100;
     top: 3rem;
     right: 5rem;
@@ -434,9 +449,7 @@ footer {
     div.blue {
         background: $gradientOne;
             }
-
 }
-
 
 .burger.open {
     transform: rotate(90deg);
