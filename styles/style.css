@@ -255,6 +255,62 @@ body {
   border: 0.5px solid #707070;
 }
 
+@-webkit-keyframes rotate {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes rotate {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+div.loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(28deg, #0099ff 3%, #8de3f7 24%, #d0ffe1 47%, #f6ffd0 57%, #d0ffe1 67%, #c3f9e5 76%, #8de3f7 87%, #0099ff 100%);
+  z-index: 500;
+  -webkit-transition: opacity 0.5s;
+  transition: opacity 0.5s;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+div.loader svg {
+  height: 50vh;
+  margin: auto;
+  -webkit-animation: rotate 10s infinite linear;
+          animation: rotate 10s infinite linear;
+}
+
+div.loader .cls-1 {
+  fill: none;
+  stroke: #707070;
+  stroke-miterlimit: 10;
+  stroke-width: 2px;
+}
+
+div.loader.hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
 ul {
   list-style-type: none;
 }
@@ -263,16 +319,11 @@ a {
   text-transform: uppercase;
   text-decoration: none;
   font-weight: 600;
-}
-
-ul a {
   color: #707070;
 }
 
-ul a:hover, ul a:focus {
-  color: white;
-  -webkit-text-stroke-width: 1px;
-  -webkit-text-stroke-color: #575757;
+li:hover a {
+  color: #005c99;
 }
 
 main h2 {
@@ -300,6 +351,30 @@ h3 {
   grid-area: long-box;
   padding: 10px 110px;
   border-bottom: 0.5px solid #707070;
+}
+
+@-webkit-keyframes Gradient {
+  0% {
+    background-position: 0 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes Gradient {
+  0% {
+    background-position: 0 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 header {
@@ -339,11 +414,17 @@ header h1 {
 
 header h1 a {
   font-family: "Sequenz-M-I", sans-serif;
-  font-size: calc(3rem + 3vw);
+  font-size: calc(3rem + 2.7vw);
   letter-spacing: 8px;
   color: white;
   -webkit-text-stroke-width: 1px;
   -webkit-text-stroke-color: #707070;
+  -webkit-transition: color 0.3s ease-in;
+  transition: color 0.3s ease-in;
+}
+
+header h1 a:hover {
+  color: #fbffe3;
 }
 
 header .fixed-h1 {
@@ -354,7 +435,7 @@ header .fixed-h1 {
   font-size: 5rem;
   text-align: left;
   padding: 1rem 2rem 0.5rem;
-  background-color: #F5F5F5;
+  background-color: #fbffe3;
   width: 100vw;
   border-bottom: 0.5px solid #707070;
 }
@@ -404,12 +485,13 @@ header .fixed-nav {
   border-right: 0.5px solid #707070;
 }
 
-header .fixed-nav li {
-  font-size: 2rem;
+header .fixed-nav li:nth-child(3),
+header .fixed-nav li:nth-child(4) {
+  border-bottom: none;
 }
 
-header .fixed-nav li:nth-child(3), header .fixed-navli:nth-child(4) {
-  border-bottom: none;
+header .fixed-nav li {
+  font-size: 2rem;
 }
 
 header li {
@@ -424,6 +506,7 @@ header li {
           align-items: center;
   width: 50%;
   padding-right: 15px;
+  cursor: pointer;
   font-size: calc(1.6rem + 0.5vw);
   letter-spacing: 1px;
   font-weight: 400;
@@ -432,6 +515,17 @@ header li {
 
 header li:first-child, header li:nth-child(3) {
   border-right: 0.5px solid #707070;
+}
+
+header li:hover {
+  background: linear-gradient(28deg, #0099ff 3%, #8de3f7 24%, #d0ffe1 47%, #f6ffd0 57%, #d0ffe1 67%, #c3f9e5 76%, #8de3f7 87%, #0099ff 100%);
+  background-size: 400% 400%;
+  -webkit-animation: Gradient 20s ease infinite;
+          animation: Gradient 20s ease infinite;
+}
+
+header li a {
+  padding-left: 3rem;
 }
 
 header .small-box {
@@ -559,23 +653,36 @@ header .long-box {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   margin: 2.5rem;
 }
 
 .portfolio .project {
   margin: 2.5rem;
-  height: 35vh;
-  width: calc(100% / 2 - 20rem);
-  min-width: 350px;
+}
+
+.portfolio .project div {
+  height: 40rem;
+  width: 55rem;
+  overflow: hidden;
   border: 0.5px solid #707070;
+  border-top: none;
 }
 
 .portfolio h3 {
+  height: 4.5rem;
   padding: 10px;
-  border-bottom: 0.5px solid #707070;
+  border: 0.5px solid #707070;
+}
+
+.portfolio img {
+  -o-object-fit: contain;
+     object-fit: contain;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  height: 100%;
 }
 
 .contact {
@@ -618,12 +725,27 @@ header .long-box {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
+}
+
+.contact .social li:hover {
+  background: linear-gradient(28deg, #0099ff 3%, #8de3f7 24%, #d0ffe1 47%, #f6ffd0 57%, #d0ffe1 67%, #c3f9e5 76%, #8de3f7 87%, #0099ff 100%);
+  background-size: 400% 400%;
+  -webkit-animation: Gradient 20s ease infinite;
+          animation: Gradient 20s ease infinite;
 }
 
 .contact .social a {
   font-size: calc(1.5rem + 0.5vw);
   letter-spacing: 2px;
-  margin: auto;
+  display: inline-block;
+  padding: 6rem 2rem;
 }
 
 form {
@@ -651,12 +773,14 @@ textarea {
   background-color: #F5F5F5;
   border: none;
   border-bottom: 0.5px solid #707070;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
 }
 
 input:hover, input:focus,
 textarea:hover,
 textarea:focus {
-  background: linear-gradient(67deg, #8de3f7 0%, #d0ffe1 100%);
+  background: #fbffe3;
 }
 
 textarea {
@@ -680,7 +804,11 @@ button {
 button:hover, button:focus {
   color: white;
   -webkit-text-stroke-width: 1px;
-  -webkit-text-stroke-color: #707070;
+  -webkit-text-stroke-color: #575757;
+  background: linear-gradient(28deg, #0099ff 3%, #8de3f7 24%, #d0ffe1 47%, #f6ffd0 57%, #d0ffe1 67%, #c3f9e5 76%, #8de3f7 87%, #0099ff 100%);
+  background-size: 400% 400%;
+  -webkit-animation: Gradient 20s ease infinite;
+          animation: Gradient 20s ease infinite;
 }
 
 ::-webkit-input-placeholder {
@@ -844,7 +972,7 @@ footer {
             align-items: start;
     padding: 3rem;
     position: fixed;
-    background-color: #F5F5F5;
+    background-color: #fbffe3;
     width: 100vw;
     border-right: none;
   }
@@ -923,6 +1051,7 @@ footer {
   }
   .contact .social li a {
     font-size: 2.2rem;
+    padding: 3rem 6rem;
   }
   form {
     margin: 2rem;
@@ -948,6 +1077,9 @@ footer {
   }
   .about div {
     min-width: 100%;
+  }
+  .contact .social li a {
+    padding: 3rem 1.5rem;
   }
 }
 

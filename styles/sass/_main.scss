@@ -18,7 +18,49 @@ body {
     border: 0.5px solid $primaryColor;
 }
 
-ul {
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+div.loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh; 
+    background: $gradientPool;
+    z-index: 500;
+
+    transition: opacity 0.5s;
+
+    display: flex;
+
+    svg {
+        height: 50vh;
+        margin: auto;
+        animation: rotate 10s infinite linear;
+    }
+
+    .cls-1  {
+        fill: none;
+        stroke :$primaryColor;
+        stroke-miterlimit:10;
+        stroke-width: 2px;
+    }
+
+    &.hidden {
+        opacity: 0;
+        pointer-events: none;
+    }
+}
+
+
+    ul {
     list-style-type: none;
 }
 
@@ -26,17 +68,12 @@ a {
     text-transform: uppercase;
     text-decoration: none;
     font-weight: 600;
+    color: $primaryColor;
 }
 
-ul a {
-    color: $primaryColor;
-    
-    &:hover,
-    &:focus {
-        color: white;
-        -webkit-text-stroke-width: 1px;
-        -webkit-text-stroke-color: darken($primaryColor, 10%)
-        ;
+li:hover {
+    a {
+        color: darken(#0099ff, 20%);
     }
 }
 
@@ -66,6 +103,17 @@ h3 {
         border-bottom: 0.5px solid $primaryColor;
     }
 
+@keyframes Gradient {
+            0% {
+                background-position: 0 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+        }
 //**general styles ends**//
 
 header {
@@ -98,13 +146,16 @@ header {
 
         a {
             font-family: $headingFontI;
-            font-size: calc(3rem + 3vw);
+            font-size: calc(3rem + 2.7vw);
             letter-spacing: 8px;
             color: white;
             -webkit-text-stroke-width: 1px;
             -webkit-text-stroke-color: $primaryColor;
+            transition: color 0.3s ease-in;
 
-
+            &:hover {
+                color: $lightAccent;
+            }
         }
     }
     
@@ -116,7 +167,7 @@ header {
         font-size: 5rem;
         text-align: left;
         padding: 1rem 2rem 0.5rem;
-        background-color: $offWhite;
+        background-color: $lightAccent;
         width: 100vw;
         border-bottom: 0.5px solid $primaryColor;
     }
@@ -148,6 +199,7 @@ header {
             display: flex;
             flex-wrap: wrap;
             height: 100%;
+
         }
     }
 
@@ -162,14 +214,15 @@ header {
         border-left: 0.5px solid $primaryColor;
         border-right: 0.5px solid $primaryColor;
 
+        li:nth-child(3),
+        li:nth-child(4) {
+            border-bottom: none;
+        }
+
         li {
             font-size: 2rem;
         }
-
-        li:nth-child(3),
-        &li:nth-child(4) {
-            border-bottom: none;
-        }
+        
     }
 
     li {
@@ -178,7 +231,7 @@ header {
         align-items: center;
         width: 50%;
         padding-right: 15px;
-    
+        cursor: pointer;
         font-size: calc(1.6rem + 0.5vw);
         letter-spacing:1px;
         font-weight: 400;
@@ -188,6 +241,16 @@ header {
         &:first-child,
         &:nth-child(3) {
             border-right:0.5px solid $primaryColor;
+        }
+
+        &:hover {
+            background: $gradientPool;
+            background-size: 400% 400%;
+            animation: Gradient 20s ease infinite;
+            }
+        
+        a {
+            padding-left: 3rem;
         }
     }
 
@@ -303,25 +366,38 @@ header {
     .project-container {
         display: flex;
         flex-wrap: wrap;
-        justify-content: center;
+        justify-content: space-around;
 
         margin: 2.5rem;
     }
 
     .project {
         margin: 2.5rem;
-        height: 35vh;
-        width: calc(100% / 2 - 20rem);
-        min-width: 350px;
-        border: 0.5px solid $primaryColor;
+
+        div {
+            height: 40rem;
+            width: 55rem;
+            overflow: hidden;
+
+            border: 0.5px solid $primaryColor;
+            border-top: none;
+        }
     }
 
     h3 {
+        height: 4.5rem;
         padding: 10px;
 
-        border-bottom: 0.5px solid $primaryColor;
+        border: 0.5px solid $primaryColor;
     }
 
+    img {
+        object-fit: contain;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        height: 100%;
+    }
 }
 
 .contact {
@@ -358,12 +434,24 @@ header {
             border-left: 0.5px solid $primaryColor;
 
             display: flex;
+            justify-content: center;
+            align-items: center;
+
+            cursor: pointer;
+
+            &:hover {
+            background: $gradientPool;
+            background-size: 400% 400%;
+            animation: Gradient 20s ease infinite;
+            }
         }
 
         a {
-        font-size: calc(1.5rem + 0.5vw);
-        letter-spacing: 2px;
-        margin: auto;
+            font-size: calc(1.5rem + 0.5vw);
+            letter-spacing: 2px;
+
+            display: inline-block;
+            padding: 6rem 2rem;
         }
     }
 
@@ -392,9 +480,11 @@ textarea {
     border: none;
     border-bottom: 0.5px solid $primaryColor;
 
+    @include transition;
+
     &:hover,
     &:focus {
-        background: $gradientOne;
+        background: $lightAccent;
     }
 }
 
@@ -418,7 +508,12 @@ button {
     &:focus {
         color: white;
         -webkit-text-stroke-width: 1px;
-        -webkit-text-stroke-color: $primaryColor;
+        -webkit-text-stroke-color: darken($primaryColor, 10%);
+        
+        background: $gradientPool;
+        background-size: 400% 400%;
+        animation: Gradient 20s ease infinite;
+        
     }
 }
 

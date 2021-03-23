@@ -1,3 +1,10 @@
+setTimeout(function () {
+        document.querySelector('.loader').classList.add('hidden');
+    }, 2500)
+
+
+
+
 const navSlide = () => {
     const burger = document.querySelector('.burger');
     const navUlEl = document.querySelector('.main-nav');
@@ -8,8 +15,6 @@ const navSlide = () => {
     const h1Top = h1El.offsetTop; 
 
     const mq = window.matchMedia('(min-width: 750px)');
-    console.log(mq);
-
 
     const stickyHeader= () => {
         if (window.scrollY >= h1Top && mq.matches) {
