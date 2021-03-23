@@ -19,7 +19,9 @@ $lightAccent: #fbffe3;
 $darkAccent: #8de3f7;
 
 $gradientOne: linear-gradient(67deg, rgba(141,227,247,1) 0%, rgba(208,255,225,1) 100%);
-$gradientPool: linear-gradient(28deg, rgba(0,153,255,1) 3%, rgba(141,227,247,1) 24%, rgba(208,255,225,1) 47%, rgba(246,255,208,1) 57%, rgba(208,255,225,1) 67%, rgba(195,249,229,1) 76%, rgba(141,227,247,1) 87%, rgba(0,153,255,1) 100%);
+$gradientLight: linear-gradient(28deg, rgba(0,153,255,1) 3%, rgba(141,227,247,1) 24%, rgba(208,255,225,1) 47%, rgba(246,255,208,1) 57%, rgba(208,255,225,1) 67%, rgba(195,249,229,1) 76%, rgba(141,227,247,1) 87%, rgba(0,153,255,1) 100%);
+$gradientPool: linear-gradient(28deg, rgba(0,52,255,1) 0%, rgba(0,153,255,1) 18%, rgba(141,227,247,1) 35%, rgba(0,181,255,1) 52%, rgba(141,227,247,1) 72%, rgba(0,153,255,1) 88%, rgba(0,26,255,1) 100%);
+
 
 $headingFont: 'Sequenz';
 $headingFontI: 'Sequenz-M-I', sans-serif;

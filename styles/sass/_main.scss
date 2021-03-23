@@ -79,8 +79,6 @@ a {
 li:hover {
     a {
         color:white;
-        -webkit-text-stroke-width: 0.2px;
-        -webkit-text-stroke-color: black;
         text-shadow: 0px 0px 2px black;
     }
 }
@@ -387,8 +385,8 @@ header {
     .project-container {
         margin: 2.5rem;
         height: 100%;
-        width: 50rem;
-        min-width: 30rem;
+        width: 43rem;
+        min-width: 25rem;
         border: 0.5px solid $primaryColor;
 
         div {
@@ -460,7 +458,7 @@ header {
             letter-spacing: 2px;
 
             display: inline-block;
-            padding: 6rem 2rem;
+            padding: 6rem 1rem;
         }
     }
 

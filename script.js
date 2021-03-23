@@ -1,23 +1,56 @@
-document.querySelector('html').classList.add('no-scroll');
+const mySite = {};
 
-setTimeout(function () {
-        document.querySelector('.loader').classList.add('hidden');
-        document.querySelector('html').classList.remove('no-scroll');
-    }, 2500)
+mySite.htmlEl = document.querySelector('html')
+mySite.htmlEl.classList.add('no-scroll');
 
-const navSlide = () => {
+mySite.loader = document.querySelector('.loader');
+
+mySite.startLoader = () => {
+    mySite.loader.classList.add('hidden');
+    mySite.htmlEl.classList.remove('no-scroll');
+}
+
+mySite.navigation = () => {   
     const mobileNav = document.querySelector('.mobile-nav');
     const navUlEl = document.querySelector('.main-nav');
     const navLi = document.querySelectorAll('.main-nav li');
     const circle = document.querySelectorAll('.circle');
-    
-    const htmlEL = document.querySelector('html');
+    const htmlEl = document.querySelector('html');
 
+    const menuLinks = document.querySelectorAll('.main-nav li a');
+
+    //open / close mobile menu
+    const mobileMenu = () => {
+        mobileNav.classList.toggle('open');
     
+        htmlEl.classList.toggle('no-scroll');
+
+        //have nav appear
+        navUlEl.classList.toggle('nav-open');
+    
+        circle[0].classList.toggle('blue');
+        circle[1].classList.toggle('blue');
+    
+        //animate li's
+        navLi.forEach((link, index) => {
+            if(link.style.animation){
+                link.style.animation = ''
+            } else {
+                link.style.animation = `navLinkFade 0.5s ease forwards ${index / 7 + 0.5}s`;
+            }
+        });
+    };
+
+    mobileNav.addEventListener('click', mobileMenu);
+
+    menuLinks.forEach((link) => {
+        link.addEventListener('click', mobileMenu);
+    })
+
+    //sticky header + nav
+
     const h1El = document.querySelector('h1 a');
     const h1Top = h1El.offsetTop; 
-
-
     const mq = window.matchMedia('(min-width: 750px)');
 
     const stickyHeader= () => {
@@ -31,26 +64,11 @@ const navSlide = () => {
     }
 
     window.addEventListener('scroll', stickyHeader);
-
-    mobileNav.addEventListener('click', function (){
-        //animate burger icon
-        mobileNav.classList.toggle('open');
-
-        htmlEL.classList.toggle('no-scroll');
-        //have nav appear
-        navUlEl.classList.toggle('nav-open');
-
-        circle[0].classList.toggle('blue');
-        circle[1].classList.toggle('blue');
-
-        //animate links
-    navLi.forEach((link, index)=>{
-        if(link.style.animation){
-            link.style.animation = ''
-        } else {
-            link.style.animation = `navLinkFade 0.5s ease forwards ${index / 7 + 0.5}s`;
-        }
-    });
-    });
 }
-navSlide();
+
+mySite.init = () => {
+    setTimeout(mySite.startLoader, 2500);
+    mySite.navigation()
+}
+
+mySite.init();
