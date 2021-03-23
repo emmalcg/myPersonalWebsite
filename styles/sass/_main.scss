@@ -8,6 +8,10 @@ html {
         margin: 0;
         padding: 0;
     }
+
+    &.no-scroll {
+        position: fixed;
+    }
 }
 
 body {
@@ -395,7 +399,7 @@ header {
     h3 {
         padding: 1rem 1rem 0.5rem;
 
-        border: 0.5px solid $primaryColor;
+        border-bottom: 0.5px solid $primaryColor;
     }
 
     img {
@@ -540,7 +544,7 @@ footer {
 
 //burger menu
 
-.burger {
+.mobile-nav {
     cursor: pointer;
     display: none;
     position: fixed;
@@ -570,7 +574,7 @@ footer {
             }
 }
 
-.burger.open {
+.mobile-nav.open {
     transform: rotate(90deg);
 }
 

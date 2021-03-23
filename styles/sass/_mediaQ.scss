@@ -89,7 +89,7 @@
         ///navigation 
         ul {
             flex-direction: column;
-            position: absolute;
+            position: fixed;
             right: 0px;
             top: 0px;
             z-index: -1;
@@ -124,7 +124,7 @@
             z-index: 10;
         }
 
-        .burger {
+        .mobile-nav {
             display: block;
         }
     }
@@ -202,7 +202,7 @@
             }
         }
 
-    .burger {
+    .mobile-nav {
         top: 1rem;
         right: 2rem;
 
