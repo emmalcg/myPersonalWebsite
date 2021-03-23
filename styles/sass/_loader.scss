@@ -1,0 +1,40 @@
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+div.loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh; 
+    background: $gradientLight;
+    z-index: 500;
+
+    transition: opacity 0.5s;
+
+    display: flex;
+
+    svg {
+        height: 50vh;
+        margin: auto;
+        animation: rotate 10s infinite linear;
+    }
+
+    .cls-1  {
+        fill: none;
+        stroke :$primaryColor;
+        stroke-miterlimit:10;
+        stroke-width: 2px;
+    }
+
+    &.hidden {
+        opacity: 0;
+        pointer-events: none;
+    }
+}

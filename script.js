@@ -8,20 +8,21 @@ mySite.loader = document.querySelector('.loader');
 mySite.startLoader = () => {
     mySite.loader.classList.add('hidden');
     mySite.htmlEl.classList.remove('no-scroll');
+
 }
 
 mySite.navigation = () => {   
-    const mobileNav = document.querySelector('.mobile-nav');
-    const navUlEl = document.querySelector('.main-nav');
-    const navLi = document.querySelectorAll('.main-nav li');
+    const navButton = document.querySelector('.circles-button');
+    const navUlEl = document.querySelector('.mobile-links');
+    const navLi = document.querySelectorAll('.mobile-links li');
     const circle = document.querySelectorAll('.circle');
     const htmlEl = document.querySelector('html');
 
-    const menuLinks = document.querySelectorAll('.main-nav li a');
+    const menuLinks = document.querySelectorAll('.mobile-links li a');
 
     //open / close mobile menu
     const mobileMenu = () => {
-        mobileNav.classList.toggle('open');
+        navButton.classList.toggle('open');
     
         htmlEl.classList.toggle('no-scroll');
 
@@ -41,7 +42,7 @@ mySite.navigation = () => {
         });
     };
 
-    mobileNav.addEventListener('click', mobileMenu);
+    navButton.addEventListener('click', mobileMenu);
 
     menuLinks.forEach((link) => {
         link.addEventListener('click', mobileMenu);

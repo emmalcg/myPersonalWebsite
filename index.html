@@ -17,12 +17,21 @@
     <header>
     <h1><a href="#">Emma Green</a></h1>
     <h2>Front End <span>Web Developer</span></h2>
-    <nav>
-        <div class="mobile-nav">
+    <nav class="mobile-nav">
+        <!-- <div class="mobile-nav"> -->
+        <div class="circles-button">
             <div class="circle"></div>
             <div class="circle"></div>
         </div>
-        <ul class="main-nav">
+        <ul class="mobile-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="greenemma.ca">Art</a></li>
+            <li><a href="#portfolio">My Work</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+    <nav class="main-nav">
+        <ul>
             <li><a href="#about">About</a></li>
             <li><a href="greenemma.ca">Art</a></li>
             <li><a href="#portfolio">My Work</a></li>
@@ -31,13 +40,13 @@
     </nav>
     <div class="small-box"></div>
     <div class="big-box"></div>
-    <div class="long-box">
+    <div class="long-box" id="about"></div>
 
     </div>
     </header>
 
     <main>
-        <section class="about" id="about">
+        <section class="about">
             <div>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam quas quidem, ad voluptatem odit cum porro placeat reiciendis voluptas asperiores commodi deserunt! Ullam impedit eos, rem voluptatibus in delectus incidunt! Voluptatum, illo sit. Quidem, labore. Commodi dolorem quod, quidem facere voluptas quia delectus nihil at pariatur, cum consequatur ea facilis?</p>
             </div>
@@ -146,9 +155,7 @@
             </section>
         </section>
     </main>
-    <footer>
-        <p>designed + developed by Emma Green © 2021</p>
-    </footer>
+    <footer><a href="#">to top</a></footer>
     <script src="/script.js"></script>
 </body>
 </html>

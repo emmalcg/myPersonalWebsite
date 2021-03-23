@@ -1,0 +1,23 @@
+.about {
+    display: flex;
+    justify-content: flex-end;
+    border-bottom: 0.5px solid $primaryColor;
+
+    div {
+        width: 50%;
+        min-width: 550px;
+        
+
+        border-left: 0.5px solid $primaryColor;
+    }
+
+
+    p {
+        font-size: 1.8rem;
+        letter-spacing: 0.8px;
+        font-weight: 300;
+
+        margin: 30px;
+        margin-right: 12vw;
+    }
+}

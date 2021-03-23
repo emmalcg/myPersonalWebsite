@@ -1,0 +1,56 @@
+.skills {
+    display: grid;
+    grid-template-columns: 10rem 1.3fr 2fr;
+    grid-template-rows: 7rem 5rem 1fr 5rem;
+    grid-template-areas: 
+    "long-box   long-box    long-box"
+    ".          skills      currently-learning"
+    ".          skills      big-box"
+    ".          skills      currently-building";
+
+    border-bottom: 0.5px solid $primaryColor;
+
+    ul {
+        grid-area: skills;
+
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-items: center;
+
+        padding: 2rem;
+
+        border-left: 0.5px solid $primaryColor;
+    }
+
+    li {
+        margin: 2rem;
+        
+        img {
+            height: calc(4rem + 2vw);
+        }
+    }
+
+    .currently-learning,
+    .currently-building {
+        border-left: 0.5px solid $primaryColor;
+        text-align: right;
+        padding: 13px 15px;
+    }
+
+    .currently-learning{
+        grid-area: currently-learning;
+    }
+
+    .currently-building {
+        grid-area: currently-building;
+    }
+    
+    .middle {
+        grid-area: big-box;
+        height: 100%;
+        
+        border: 0.5px solid $primaryColor;
+        border-right: none;
+    }
+}
