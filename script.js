@@ -2,9 +2,6 @@ setTimeout(function () {
         document.querySelector('.loader').classList.add('hidden');
     }, 2500)
 
-
-
-
 const navSlide = () => {
     const burger = document.querySelector('.burger');
     const navUlEl = document.querySelector('.main-nav');

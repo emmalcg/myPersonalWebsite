@@ -43,12 +43,6 @@
         "skills          skills      currently-building";
     }
 
-    .portfolio {
-        .project {
-            width: 70%;
-        }
-    }
-
     .contact {
         grid-template-columns: 6rem 1fr 2rem 0.7fr 2rem;
 
@@ -153,6 +147,13 @@
 
         .currently-learning {
             border-top: 0.5px solid $primaryColor;
+        }
+
+        .project {
+            div {
+                height: 25rem;
+                width: 32rem;
+            }
         }
     }
 
