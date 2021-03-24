@@ -69,10 +69,27 @@ mySite.navigation = () => {
     window.addEventListener('scroll', stickyHeader);
 }
 
+
+mySite.accordion = () => {
+    const buttons = document.querySelectorAll('.a-circles');
+    console.log(buttons);
+
+    buttons.forEach((button) => {
+        button.addEventListener('click', (e) => {
+            button.parentElement.classList.toggle('active');
+            console.log(button.parentElement);
+
+            button.classList.toggle('open');
+        })
+    })
+}
+
+
+
 mySite.init = () => {
     setTimeout(mySite.startLoader, 2600);
     mySite.navigation()
-    console.log(mySite.svgPath);
+    mySite.accordion()
 }
 
 mySite.init();

@@ -320,6 +320,7 @@ h3 {
   grid-area: long-box;
   padding: 10px 110px;
   border-bottom: 0.5px solid #707070;
+  background-color: #fbffe3;
 }
 
 @-webkit-keyframes Gradient {
@@ -551,7 +552,8 @@ header .small-box {
 }
 
 header .big-box {
-  -ms-grid-row: 3;
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 2;
   -ms-grid-column: 3;
   grid-area: big-box;
 }
@@ -725,11 +727,11 @@ ul.fixed-nav li a {
       grid-template-columns: 10rem 1.3fr 2fr;
   -ms-grid-rows: 7rem 5rem 1fr 5rem;
       grid-template-rows: 7rem 5rem 1fr 5rem;
-      grid-template-areas: "long-box   long-box    long-box" ".          skills      currently-learning" ".          skills      big-box" ".          skills      currently-building";
+      grid-template-areas: "long-box   long-box    long-box" ".          skills      accordion" ".          skills      accordion" ".          skills      accordion";
   border-bottom: 0.5px solid #707070;
 }
 
-.skills ul {
+ul.skills-list {
   -ms-grid-row: 2;
   -ms-grid-row-span: 3;
   -ms-grid-column: 2;
@@ -748,40 +750,125 @@ ul.fixed-nav li a {
   border-left: 0.5px solid #707070;
 }
 
-.skills li {
+ul.skills-list li {
   margin: 2rem;
 }
 
-.skills li img {
+ul.skills-list li img {
   height: calc(4rem + 2vw);
 }
 
-.skills .currently-learning,
-.skills .currently-building {
-  border-left: 0.5px solid #707070;
-  text-align: right;
-  padding: 13px 15px;
-}
-
-.skills .currently-learning {
+.accordion {
   -ms-grid-row: 2;
+  -ms-grid-row-span: 3;
   -ms-grid-column: 3;
-  grid-area: currently-learning;
+  grid-area: accordion;
+  border-left: 0.5px solid #707070;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
-.skills .currently-building {
-  -ms-grid-row: 4;
-  -ms-grid-column: 3;
-  grid-area: currently-building;
+.currently-learning h3,
+.currently-building h3 {
+  text-align: right;
+  padding: 1.3rem 6rem;
 }
 
-.skills .middle {
-  -ms-grid-row: 3;
-  -ms-grid-column: 3;
-  grid-area: big-box;
-  height: 100%;
+.currently-learning {
+  position: relative;
+}
+
+.currently-learning h3 {
+  border-bottom: 0.5px solid #707070;
+}
+
+.currently-building {
+  margin-top: auto;
+  position: relative;
+}
+
+.currently-building h3 {
+  border-top: 0.5px solid #707070;
+}
+
+.a-content {
+  width: 100%;
+  height: auto;
+  max-height: 0;
+  overflow: hidden;
+  padding: 0;
+  opacity: 0;
+  background-color: #a5e9f9;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+.a-content li {
+  display: block;
+  font-size: 2rem;
+  text-align: right;
+  margin: 0 1rem 2.8rem 0;
+}
+
+.currently-building.active .a-content,
+.currently-learning.active .a-content {
+  padding: 3rem 3rem 0 3rem;
+  max-height: 30rem;
+  opacity: 1;
+}
+
+div.a-circles {
+  cursor: pointer;
+  position: absolute;
+  right: 0;
+  padding: 0.3rem 2.5rem;
+  -webkit-transform-origin: center;
+          transform-origin: center;
+}
+
+div.a-circles div {
+  width: 1.3rem;
+  height: 1.3rem;
+  border-radius: 50%;
   border: 0.5px solid #707070;
-  border-right: none;
+  background-color: white;
+  margin: 6px 0;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+div.a-circles:hover div, div.a-circles:focus div {
+  background: #8de3f7;
+}
+
+.currently-building div.a-circles {
+  top: 0;
+}
+
+.currently-building.active .a-content {
+  border-top: 0.5px solid #707070;
+}
+
+.currently-learning div.a-circles {
+  bottom: 0.5rem;
+}
+
+.currently-learning.active .a-content {
+  border-bottom: 0.5px solid #707070;
+}
+
+.a-circles.open {
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+}
+
+.a-circles.open div {
+  background-color: #8de3f7;
 }
 
 .portfolio {

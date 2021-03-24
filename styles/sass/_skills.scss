@@ -4,25 +4,26 @@
     grid-template-rows: 7rem 5rem 1fr 5rem;
     grid-template-areas: 
     "long-box   long-box    long-box"
-    ".          skills      currently-learning"
-    ".          skills      big-box"
-    ".          skills      currently-building";
+    ".          skills      accordion"
+    ".          skills      accordion"
+    ".          skills      accordion";
 
     border-bottom: 0.5px solid $primaryColor;
 
-    ul {
-        grid-area: skills;
+}
+ul.skills-list {
+    grid-area: skills;
 
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-around;
-        align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
 
-        padding: 2rem;
+    padding: 2rem;
 
-        border-left: 0.5px solid $primaryColor;
-    }
+    border-left: 0.5px solid $primaryColor;
 
+    
     li {
         margin: 2rem;
         
@@ -30,27 +31,116 @@
             height: calc(4rem + 2vw);
         }
     }
+}
 
-    .currently-learning,
-    .currently-building {
-        border-left: 0.5px solid $primaryColor;
-        text-align: right;
-        padding: 13px 15px;
-    }
 
-    .currently-learning{
-        grid-area: currently-learning;
-    }
+.accordion {
+    grid-area: accordion;
+    border-left: 0.5px solid $primaryColor;
 
-    .currently-building {
-        grid-area: currently-building;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.currently-learning h3,
+.currently-building h3 {
+    text-align: right;
+
+    padding: 1.3rem 6rem;
+}
+
+.currently-learning{
+    position: relative;
+    h3 {
+        border-bottom: 0.5px solid $primaryColor;
     }
+}
+
+.currently-building {
+    margin-top: auto;
+    position: relative;
+
+    h3 {
+        border-top: 0.5px solid $primaryColor;
+    }
+}
+
+.a-content {
+    width: 100%;
+    height: auto;
+    max-height: 0;
+    overflow: hidden;
+    padding: 0 ;
+    opacity: 0;
+    background-color: lighten($darkAccent, 5%);
+    @include transition;
     
-    .middle {
-        grid-area: big-box;
-        height: 100%;
-        
+    li {
+        display: block;
+        font-size: 2rem;
+        text-align: right;
+        margin: 0 1rem 2.8rem 0;
+    }
+}
+    
+.currently-building.active .a-content,
+.currently-learning.active .a-content {
+    padding: 3rem 3rem 0 3rem;
+    max-height: 30rem;
+    opacity: 1;
+}
+
+div.a-circles {
+    cursor: pointer;
+    position: absolute;
+    right: 0;
+    padding: 0.3rem 2.5rem;
+
+    transform-origin: center;
+
+    div {
+        width: 1.3rem;
+        height: 1.3rem;
+        border-radius: 50%;
         border: 0.5px solid $primaryColor;
-        border-right: none;
+        background-color: white;
+        margin: 6px 0;
+        @include transition;
+    }
+
+    &:hover,
+    &:focus {
+        div {
+            background: $darkAccent;
+        }
+    }
+}
+
+.currently-building {
+    div.a-circles {
+    top: 0;
+    }
+
+    &.active .a-content {
+        border-top: 0.5px solid $primaryColor;
+    }
+}
+
+.currently-learning {
+    div.a-circles {
+        bottom: 0.5rem;
+    }
+
+    &.active .a-content {
+        border-bottom: 0.5px solid $primaryColor;
+    }
+}
+
+.a-circles.open {
+    transform: rotate(90deg);
+
+    div {
+        background-color: $darkAccent;
     }
 }
