@@ -21,7 +21,7 @@
         height: 1.3rem;
         border-radius: 50%;
         border: 0.5px solid $primaryColor;
-        background-color: $gradientOne;
+        background: $gradientOne;
         margin: 6px 0;
         @include transition;
     }
