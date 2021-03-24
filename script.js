@@ -75,7 +75,7 @@ mySite.accordion = () => {
     console.log(buttons);
 
     buttons.forEach((button) => {
-        button.addEventListener('click', (e) => {
+        button.addEventListener('click', () => {
             button.parentElement.classList.toggle('active');
             console.log(button.parentElement);
 

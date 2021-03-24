@@ -1,11 +1,9 @@
 .skills {
     display: grid;
     grid-template-columns: 10rem 1.3fr 2fr;
-    grid-template-rows: 7rem 5rem 1fr 5rem;
+    grid-template-rows: 7rem 1fr;
     grid-template-areas: 
     "long-box   long-box    long-box"
-    ".          skills      accordion"
-    ".          skills      accordion"
     ".          skills      accordion";
 
     border-bottom: 0.5px solid $primaryColor;
@@ -25,7 +23,7 @@ ul.skills-list {
 
     
     li {
-        margin: 2rem;
+        margin: 1.8rem;
         
         img {
             height: calc(4rem + 2vw);

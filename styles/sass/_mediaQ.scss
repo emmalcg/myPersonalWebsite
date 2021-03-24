@@ -35,8 +35,17 @@
         grid-template-areas:
         "long-box   long-box    long-box"
         "skills          skills      accordion"
-        "skills          skills      accordion"
-        "skills          skills      accordion";
+    }
+
+    .currently-learning h3,
+    .currently-building h3 {
+    text-align: right;
+
+    padding: 1.3rem 4rem 1.3rem 0.1rem;
+    }
+
+    div.a-circles {
+        padding: 0.2rem 1.5rem;
     }
 
     .contact {
@@ -76,6 +85,7 @@
         background-color: $lightAccent;
         width: 100vw;
         border-right: none;
+        z-index: 1;
     }
         
     header h2 {
@@ -100,24 +110,26 @@
     }
 
     .skills {
-        grid-template-rows: 7rem 1fr 5rem 0.7fr 5rem;
+        grid-template-rows: 7rem 1fr 1.3fr;
         grid-template-areas: 
         "long-box   long-box    long-box"
         "skills     skills      skills"
-        "accordion     accordion      accordion"
-        "accordion     accordion      accordion"
         "accordion     accordion      accordion";
 
-        .currently-learning {
-            border-top: 0.5px solid $primaryColor;
-        }
+    }
 
-        .project {
-            div {
-                height: 25rem;
-                width: 32rem;
-            }
-        }
+    .currently-learning {
+        border-top: 0.5px solid $primaryColor;
+    }
+
+    .currently-learning h3,
+    .currently-building h3 {
+        font-size: 2rem;
+        padding: 1.3rem 6rem;
+    }
+
+    div.a-circles {
+        padding: 0.3rem 2.5rem;
     }
 
     .contact {
