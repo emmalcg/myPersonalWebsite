@@ -882,27 +882,35 @@ div.a-circles:hover div, div.a-circles:focus div {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -ms-flex-pack: distribute;
       justify-content: space-around;
   margin: 2.5rem;
 }
 
 .project-container {
-  margin: 2.5rem;
-  width: 50rem;
-  min-width: 25rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin: 5rem 0;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.project-container .project {
+  width: 55rem;
+  overflow: hidden;
   border: 0.5px solid #707070;
-}
-
-.project-container div {
-  max-height: 100%;
-}
-
-.project-container h3 {
-  padding: 1rem 1rem 0.5rem;
-  border-bottom: 0.5px solid #707070;
+  margin: 3rem;
 }
 
 .project-container img {
@@ -912,61 +920,50 @@ div.a-circles:hover div, div.a-circles:focus div {
   max-width: 100%;
 }
 
-.project {
+.project-info {
   position: relative;
-  overflow: hidden;
-}
-
-.project:hover .overlay-background {
-  opacity: 0.97;
-}
-
-.project:hover .overlay {
-  opacity: 1;
-}
-
-.overlay-background,
-.overlay {
-  position: absolute;
-  top: 0;
-  right: 0;
-  height: 100%;
-  width: 100%;
-  opacity: 0;
-  -webkit-transition: all 0.5s ease-in-out;
-  transition: all 0.5s ease-in-out;
-}
-
-.overlay-background {
-  background: #09667c;
-}
-
-.overlay {
-  padding: 2rem;
-  color: white;
+  width: 40rem;
+  height: auto;
+  margin: 3rem;
+  padding-bottom: 3rem;
+  border: 0.5px solid #707070;
   text-align: center;
   font-size: 1.9rem;
-  font-weight: 600;
 }
 
-.overlay p {
-  margin: 3rem 0;
+.project-info p {
+  margin: 3rem 1rem;
 }
 
-.overlay a {
+.project-info h3 {
+  padding: 1rem 1rem 0.5rem;
+  border-bottom: 0.5px solid #707070;
+}
+
+.project-info a {
+  position: absolute;
   display: inline-block;
   margin: 2rem;
   padding: 1.3rem 2rem;
   background-color: #F5F5F5;
-  border: 1px solid #09667c;
+  border: 0.5px solid #707070;
   letter-spacing: 1.3px;
   font-family: "Overpass", sans-serif;
-  color: #053f4d;
 }
 
-.overlay a:hover, .overlay a:focus {
+.project-info a:hover, .project-info a:focus {
   background: linear-gradient(67deg, #8de3f7 0%, #d0ffe1 100%);
   background-size: 250%;
+}
+
+.project-info a:first-of-type {
+  bottom: -4.5rem;
+  left: 2rem;
+}
+
+.project-info a:last-of-type {
+  right: 2rem;
+  bottom: -4.5rem;
 }
 
 .contact {

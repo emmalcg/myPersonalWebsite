@@ -9,7 +9,7 @@
 
     .flex-container {
         display: flex;
-        flex-wrap: wrap;
+        flex-direction: column;
         justify-content: space-around;
 
         margin: 2.5rem;
@@ -17,91 +17,74 @@
 }
 
 .project-container {
-    margin: 2.5rem;
-    width: 50rem;
-    min-width: 25rem;
-    border: 0.5px solid $primaryColor;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 5rem 0;
+    justify-content: center;
+    align-items: center;
     
-
-    div {
-        max-height: 100%;
+    .project {
+        width: 55rem;
+        overflow: hidden;
+        border: 0.5px solid $primaryColor;
+        margin: 3rem;
     }
 
-
-    h3 {
-        padding: 1rem 1rem 0.5rem;
-
-        border-bottom: 0.5px solid $primaryColor;
-    }
-
+    
     img {
         object-fit: contain;
         display: block;
         max-width: 100%;
     }
-
+    
 }
 
-.project {
+.project-info {
     position: relative;
-    overflow: hidden;
-}
-
-.project:hover {
-    .overlay-background {
-        opacity: 0.97;
-    }
-    .overlay {
-        opacity: 1;
-    }
-}
-
-.overlay-background,
-.overlay {
-    position: absolute;
-    top: 0;
-    right: 0;
-    height: 100%;
-    width: 100%;
-    opacity: 0;
-
-    -webkit-transition: all 0.5s ease-in-out;
-    -moz-transition: all 0.5s ease-in-out;
-    transition: all 0.5s ease-in-out;
-}
-
-
-.overlay-background {
-    background: darken($darkAccent, 50%);
-}
-
-.overlay {
-    padding: 2rem;
-
-    color: white;
+    width: 40rem;
+    height: auto;
+    margin: 3rem;
+    padding-bottom: 3rem;
+    border: 0.5px solid $primaryColor;
+    
     text-align: center;
     font-size: 1.9rem;
-    font-weight: 600;
-
+    
     p {
-        margin: 3rem 0;
+        margin: 3rem 1rem;
+
+    }
+    
+    h3 {
+        padding: 1rem 1rem 0.5rem;
+    
+        border-bottom: 0.5px solid $primaryColor;
     }
 
     a {
+        position: absolute;
         display: inline-block;
         margin: 2rem;
         padding: 1.3rem 2rem;
         background-color: $offWhite;
 
-        border: 1px solid darken($darkAccent, 50%);
+        border: 0.5px solid $primaryColor;
         letter-spacing: 1.3px;
         font-family: $bodyFont;
-        color: darken($darkAccent, 60%);
 
         &:hover,
         &:focus {
             background: $gradientOne;
             background-size: 250%;
+        }
+
+        &:first-of-type {
+            bottom: -4.5rem;
+            left: 2rem;
+        }
+        &:last-of-type {
+            right: 2rem;
+            bottom: -4.5rem;
         }
     }
 }
