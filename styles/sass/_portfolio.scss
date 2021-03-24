@@ -14,17 +14,19 @@
 
         margin: 2.5rem;
     }
+}
 
-    .project-container {
-        margin: 2.5rem;
-        width: 43rem;
-        min-width: 25rem;
-        border: 0.5px solid $primaryColor;
+.project-container {
+    margin: 2.5rem;
+    width: 50rem;
+    min-width: 25rem;
+    border: 0.5px solid $primaryColor;
+    
 
-        div {
-            max-height: 100%;
-        }
+    div {
+        max-height: 100%;
     }
+
 
     h3 {
         padding: 1rem 1rem 0.5rem;
@@ -37,4 +39,70 @@
         display: block;
         max-width: 100%;
     }
+
 }
+
+.project {
+    position: relative;
+    overflow: hidden;
+}
+
+.project:hover {
+    .overlay-background {
+        opacity: 0.97;
+    }
+    .overlay {
+        opacity: 1;
+    }
+}
+
+.overlay-background,
+.overlay {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+}
+
+
+.overlay-background {
+    background: darken($darkAccent, 50%);
+}
+
+.overlay {
+    padding: 2rem;
+
+    color: white;
+    text-align: center;
+    font-size: 1.9rem;
+    font-weight: 600;
+
+    p {
+        margin: 3rem 0;
+    }
+
+    a {
+        display: inline-block;
+        margin: 2rem;
+        padding: 1.3rem 2rem;
+        background-color: $offWhite;
+
+        border: 1px solid darken($darkAccent, 50%);
+        letter-spacing: 1.3px;
+        font-family: $bodyFont;
+        color: darken($darkAccent, 60%);
+
+        &:hover,
+        &:focus {
+            background: $gradientOne;
+            background-size: 250%;
+        }
+    }
+}
+

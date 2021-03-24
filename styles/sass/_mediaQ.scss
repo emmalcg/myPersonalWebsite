@@ -12,18 +12,15 @@
         ".  form      .   social    ."
         ".  form   .   social    ."
         ".      form       .       .    .";
+    }
 
-        .social {
-
-            grid-row: 3 / 6;
-
-            ul {
-                grid-template-columns: repeat(3, 1fr);
-            }
-
-            li:last-of-type {
-                grid-column: span 2;
-            }
+    .social {
+        grid-row: 3 / 6;
+        ul {
+            grid-template-columns: repeat(3, 1fr);
+        }
+        li:last-of-type {
+            grid-column: span 2;
         }
     }
 }
@@ -44,16 +41,15 @@
 
     .contact {
         grid-template-columns: 6rem 1fr 2rem 0.7fr 2rem;
+    }
 
-        .social {
+    .social {
+        ul {
+            grid-template-columns: repeat(2, 1fr);
+        }
 
-            ul {
-                grid-template-columns: repeat(2, 1fr);
-            }
-
-            li:last-of-type {
-                grid-column: span 1;
-            }
+        li:last-of-type {
+            grid-column: span 1;
         }
     }
 }
@@ -70,69 +66,30 @@
         "header     header      header"
         "small-box   h2      h2"
         "long-box       long-box        long-box";
+    }
         
-        h1 {
-            justify-content: start;
-            align-items: start;
-            padding: 3rem;
-            position: fixed;
-            background-color: $lightAccent;
-            width: 100vw;
-            border-right: none;
-        }
+    h1 {
+        justify-content: start;
+        align-items: start;
+        padding: 3rem;
+        position: fixed;
+        background-color: $lightAccent;
+        width: 100vw;
+        border-right: none;
+    }
         
-        h2 {
-            border-right: none;
-        }
+    header h2 {
+        border-right: none;
+    }
 
-        .main-nav {
-            display: none;
-        }
+    //hide desktop navigation
+    .main-nav {
+        display: none;
+    }
 
-        .mobile-nav {
-            display: block;
-        }
-        // ///navigation 
-        // ul {
-        //     flex-direction: column;
-        //     position: fixed;
-        //     right: 0px;
-        //     top: 0px;
-        //     z-index: -1;
-        //     height: 100vh;
-        //     width: 100vw;
-        //     padding-top: 10rem;
-
-        //     background-color: $lightAccent;
-        //     opacity: 98%;
-        //     transform: translateY(-100%);
-        //     @include transition;
-
-        //     li {
-        //         width: 100%;
-        //         justify-content: center;
-        //         height: 7rem;
-        //         font-size: 3rem;
-        //         opacity: 0;
-
-        //         &:first-child {
-        //             border-top: 0.5px solid $primaryColor;
-        //             border-right: none;
-        //         }
-        //         &:nth-child(3) {
-        //             border-right: none;
-        //         }
-        //     }
-        // }
-
-        // .nav-open {
-        //     transform: translateY(0%);
-        //     z-index: 10;
-        // }
-
-        // .mobile-nav {
-        //     display: block;
-        // }
+    //show mobile navigation
+    .mobile-nav {
+        display: block;
     }
 }
 
@@ -172,76 +129,63 @@
         "form"
         "social"
         ".";
+    }
 
+    .social {
+        margin: 0 2rem 2rem 2rem;
 
-        .social {
-            margin: 0 2rem 2rem 2rem;
-
-            li {
-                height: 8rem;
-                a {
-                    font-size: 2.2rem;
-                    padding: 3rem 6rem;
-                }
+        li {
+            height: 8rem;
+            a {
+                font-size: 2.2rem;
+                padding: 3rem 6rem;
             }
         }
-
     }
 
     form {
         margin: 2rem;
     }
-
-
 }
 
 @media(max-width: 550px) {
     header {
         grid-template-columns: 0.5fr 1fr 0.5fr;
         grid-template-rows: 7rem 0.1rem 1fr 7rem;
+    }
 
-        h1 {
-            padding: 1rem;
-            a {
-                letter-spacing: 4px;
-                }
+    h1 {
+        padding: 1rem;
+        a {
+            letter-spacing: 4px;
             }
-        }
+    }
 
     .circles-button {
         top: 1rem;
         right: 2rem;
-
     }
+
     .about {
         div {
             min-width: 100%;
         }
     }
 
-    .contact {
-
-        .social {
-    
-            li {
-                a {
-                    padding: 3rem 1.5rem;
-                }
+    .social {
+        li {
+            a {
+                padding: 3rem 1.5rem;
             }
         }
     }
+
 }
 
 @media (max-width: 345px) {
-    header {
-        h1 {
-            a {
-                font-size: 3.5rem;
-            }
+    h1 {
+        a {
+            font-size: 3.5rem;
         }
     }
-    .burger {
-        top: 0.7rem;
-    }
-
 }

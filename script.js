@@ -11,10 +11,11 @@ mySite.startLoader = () => {
 
 }
 
+
 mySite.navigation = () => {   
     const navButton = document.querySelector('.circles-button');
-    const navUlEl = document.querySelector('.mobile-links');
-    const navLi = document.querySelectorAll('.mobile-links li');
+    const mobUl = document.querySelector('.mobile-links');
+    const mobLi = document.querySelectorAll('.mobile-links li');
     const circle = document.querySelectorAll('.circle');
     const htmlEl = document.querySelector('html');
 
@@ -27,13 +28,13 @@ mySite.navigation = () => {
         htmlEl.classList.toggle('no-scroll');
 
         //have nav appear
-        navUlEl.classList.toggle('nav-open');
+        mobUl.classList.toggle('nav-open');
     
         circle[0].classList.toggle('blue');
         circle[1].classList.toggle('blue');
     
         //animate li's
-        navLi.forEach((link, index) => {
+        mobLi.forEach((link, index) => {
             if(link.style.animation){
                 link.style.animation = ''
             } else {
@@ -50,6 +51,7 @@ mySite.navigation = () => {
 
     //sticky header + nav
 
+    const mainUl = document.querySelector('.main-nav ul')
     const h1El = document.querySelector('h1 a');
     const h1Top = h1El.offsetTop; 
     const mq = window.matchMedia('(min-width: 750px)');
@@ -57,10 +59,10 @@ mySite.navigation = () => {
     const stickyHeader= () => {
         if (window.scrollY >= h1Top && mq.matches) {
             h1El.classList.add('fixed-h1');
-            navUlEl.classList.add('fixed-nav');
+            mainUl.classList.add('fixed-nav');
         } else {
             h1El.classList.remove('fixed-h1');
-            navUlEl.classList.remove('fixed-nav');
+            mainUl.classList.remove('fixed-nav');
         }
     }
 
@@ -68,8 +70,9 @@ mySite.navigation = () => {
 }
 
 mySite.init = () => {
-    setTimeout(mySite.startLoader, 2500);
+    setTimeout(mySite.startLoader, 2600);
     mySite.navigation()
+    console.log(mySite.svgPath);
 }
 
 mySite.init();

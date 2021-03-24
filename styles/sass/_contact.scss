@@ -13,50 +13,45 @@
     .long-box {
         grid-area: long-box;
     }
+}
 
-    .social {
-        grid-area: social;
+.social {
+    grid-area: social;
 
-        border-top: 0.5px solid $primaryColor;
-        border-right: 0.5px solid $primaryColor;
+    border-top: 0.5px solid $primaryColor;
+    border-right: 0.5px solid $primaryColor;
 
-        ul {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-        }
-
-        li {
-            height: 15rem;
-
-            border-bottom: 0.5px solid $primaryColor;
-            border-left: 0.5px solid $primaryColor;
-
-            display: flex;
-            justify-content: center;
-            align-items: center;
-
-            cursor: pointer;
-
-            &:hover {
-            background: $gradientPool;
-            background-size: 400% 400%;
-            animation: Gradient 20s ease infinite;
-            }
-        }
-
-        a {
-            font-size: calc(1.5rem + 0.5vw);
-            letter-spacing: 2px;
-
-            display: inline-block;
-            height: 100%;
-            width: 100%;
-            text-align: center;
-            padding: 6rem 1rem;
-        }
+    ul {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
     }
 
+    li {
+        height: 15rem;
+
+        border-bottom: 0.5px solid $primaryColor;
+        border-left: 0.5px solid $primaryColor;
+    }
+
+    a {
+        font-size: calc(1.5rem + 0.5vw);
+        letter-spacing: 2px;
+
+        display: inline-block;
+        height: 100%;
+        width: 100%;
+        text-align: center;
+        padding: 6rem 1rem;
+
+        &:hover,
+        &:focus {                       
+            background: $gradientPool;
+            background-size: 400% 400%;
+            animation: Gradient 15s ease infinite;   
+        }
+    }
 }
+
 
 
 form {
@@ -123,5 +118,4 @@ button {
     letter-spacing: 2px;
     color: $primaryColor;
     opacity: 1;
-
 }
