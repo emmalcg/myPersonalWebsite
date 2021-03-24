@@ -1290,6 +1290,14 @@ footer a:focus {
   .project-info {
     margin: 3rem 0;
   }
+  .project-info a:first-of-type {
+    bottom: -4.5rem;
+    left: 0.7rem;
+  }
+  .project-info a:last-of-type {
+    right: 0.7rem;
+    bottom: -4.5rem;
+  }
   .circles-button {
     top: 1rem;
     right: 2rem;
