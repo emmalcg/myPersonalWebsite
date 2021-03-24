@@ -12,7 +12,7 @@
     @include transition;
     &:hover {
             div {
-                background: $gradientOne;
+                background: tomato;
             }
         }
 
@@ -21,12 +21,12 @@
         height: 1.3rem;
         border-radius: 50%;
         border: 0.5px solid $primaryColor;
-        background-color: $darkAccent;
+        background-color: $gradientOne;
         margin: 6px 0;
         @include transition;
     }
 
-    div.blue {
+    div.red {
         background: tomato;
             }
 }

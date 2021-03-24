@@ -440,7 +440,7 @@ div.loader.hidden {
 }
 
 .circles-button:hover div {
-  background: linear-gradient(67deg, #8de3f7 0%, #d0ffe1 100%);
+  background: tomato;
 }
 
 .circles-button div {
@@ -448,13 +448,13 @@ div.loader.hidden {
   height: 1.3rem;
   border-radius: 50%;
   border: 0.5px solid #707070;
-  background-color: #8de3f7;
+  background-color: linear-gradient(67deg, #8de3f7 0%, #d0ffe1 100%);
   margin: 6px 0;
   -webkit-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
 }
 
-.circles-button div.blue {
+.circles-button div.red {
   background: tomato;
 }
 
@@ -834,7 +834,7 @@ div.a-circles div {
   height: 1.3rem;
   border-radius: 50%;
   border: 0.5px solid #707070;
-  background-color: #8de3f7;
+  background-color: linear-gradient(67deg, #8de3f7 0%, #d0ffe1 100%);
   margin: 6px 0;
   -webkit-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;

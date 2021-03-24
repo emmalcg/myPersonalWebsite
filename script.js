@@ -30,8 +30,8 @@ mySite.navigation = () => {
         //have nav appear
         mobUl.classList.toggle('nav-open');
     
-        circle[0].classList.toggle('blue');
-        circle[1].classList.toggle('blue');
+        circle[0].classList.toggle('red');
+        circle[1].classList.toggle('red');
     
         //animate li's
         mobLi.forEach((link, index) => {

@@ -102,7 +102,7 @@ div.a-circles {
         height: 1.3rem;
         border-radius: 50%;
         border: 0.5px solid $primaryColor;
-        background-color: $darkAccent;
+        background-color: $gradientOne;
         margin: 6px 0;
         @include transition;
     }
@@ -110,7 +110,7 @@ div.a-circles {
     &:hover,
     &:focus {
         div {
-            background: $darkAccent;
+            background: $tomato;
         }
     }
 }
