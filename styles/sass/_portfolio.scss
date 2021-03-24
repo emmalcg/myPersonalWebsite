@@ -56,7 +56,8 @@
     }
     
     h3 {
-        padding: 1rem 1rem 0.5rem;
+        padding: 1rem 1rem 0.5rem; 
+        background-color: $lightAccent;
     
         border-bottom: 0.5px solid $primaryColor;
     }
@@ -66,7 +67,7 @@
         display: inline-block;
         margin: 2rem;
         padding: 1.3rem 2rem;
-        background-color: $offWhite;
+        background-color: $lightAccent;
 
         border: 0.5px solid $primaryColor;
         letter-spacing: 1.3px;

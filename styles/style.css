@@ -937,6 +937,7 @@ div.a-circles:hover div, div.a-circles:focus div {
 
 .project-info h3 {
   padding: 1rem 1rem 0.5rem;
+  background-color: #fbffe3;
   border-bottom: 0.5px solid #707070;
 }
 
@@ -945,7 +946,7 @@ div.a-circles:hover div, div.a-circles:focus div {
   display: inline-block;
   margin: 2rem;
   padding: 1.3rem 2rem;
-  background-color: #F5F5F5;
+  background-color: #fbffe3;
   border: 0.5px solid #707070;
   letter-spacing: 1.3px;
   font-family: "Overpass", sans-serif;
@@ -1279,6 +1280,15 @@ footer a:focus {
   }
   h1 a {
     letter-spacing: 4px;
+  }
+  .portfolio .flex-container {
+    margin: 2.5rem 1.5rem;
+  }
+  .project-container .project {
+    margin: 3rem 0;
+  }
+  .project-info {
+    margin: 3rem 0;
   }
   .circles-button {
     top: 1rem;
