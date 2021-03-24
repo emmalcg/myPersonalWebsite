@@ -1172,7 +1172,7 @@ footer a:focus {
     padding: 1rem 6rem;
   }
   .skills {
-        grid-template-areas: "long-box   long-box    long-box" "skills          skills      currently-learning" "skills          skills      big-box" "skills          skills      currently-building";
+        grid-template-areas: "long-box   long-box    long-box" "skills          skills      accordion" "skills          skills      accordion" "skills          skills      accordion";
   }
   .contact {
     -ms-grid-columns: 6rem 1fr 2rem 0.7fr 2rem;
@@ -1228,7 +1228,7 @@ footer a:focus {
   .skills {
     -ms-grid-rows: 7rem 1fr 5rem 0.7fr 5rem;
         grid-template-rows: 7rem 1fr 5rem 0.7fr 5rem;
-        grid-template-areas: "long-box   long-box    long-box" "skills     skills      skills" "currently-learning     currently-learning      currently-learning" "big-box          big-box      big-box" "currently-building     currently-building      currently-building";
+        grid-template-areas: "long-box   long-box    long-box" "skills     skills      skills" "accordion     accordion      accordion" "accordion     accordion      accordion" "accordion     accordion      accordion";
   }
   .skills .currently-learning {
     border-top: 0.5px solid #707070;

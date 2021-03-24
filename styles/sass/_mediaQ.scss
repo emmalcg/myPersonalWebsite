@@ -34,9 +34,9 @@
     .skills {
         grid-template-areas:
         "long-box   long-box    long-box"
-        "skills          skills      currently-learning"
-        "skills          skills      big-box"
-        "skills          skills      currently-building";
+        "skills          skills      accordion"
+        "skills          skills      accordion"
+        "skills          skills      accordion";
     }
 
     .contact {
@@ -104,9 +104,9 @@
         grid-template-areas: 
         "long-box   long-box    long-box"
         "skills     skills      skills"
-        "currently-learning     currently-learning      currently-learning"
-        "big-box          big-box      big-box"
-        "currently-building     currently-building      currently-building";
+        "accordion     accordion      accordion"
+        "accordion     accordion      accordion"
+        "accordion     accordion      accordion";
 
         .currently-learning {
             border-top: 0.5px solid $primaryColor;
