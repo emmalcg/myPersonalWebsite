@@ -14,11 +14,25 @@
 
 
     p {
-        font-size: 1.8rem;
+        font-size: 2rem;
+        line-height: 2.4rem;
         letter-spacing: 0.8px;
         font-weight: 300;
 
         margin: 30px;
-        margin-right: 12vw;
+        margin-right: 5vw;
+    }
+
+    a {
+        text-transform: lowercase;
+        font-family: $bodyFont;
+        color:#800080;
+
+        &:hover {
+            text-decoration: underline;
+        }
+        &:focus {
+            outline: 1px solid #800080;
+        }
     }
 }

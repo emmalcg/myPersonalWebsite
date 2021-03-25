@@ -303,6 +303,7 @@ main h2 {
   color: white;
   -webkit-text-stroke-width: 1px;
   -webkit-text-stroke-color: #3F3F3F;
+  text-shadow: 0.5px 0.5px 0.5px #3F3F3F, -0.5px -0.5px 0.5px #3F3F3F, -0.5px 0.5px 0.5px #3F3F3F, 0.5px -0.5px 0.5px #3F3F3F;
 }
 
 h3 {
@@ -659,6 +660,7 @@ h1 a {
   -webkit-text-stroke-color: #3F3F3F;
   -webkit-transition: color 0.3s ease-in;
   transition: color 0.3s ease-in;
+  text-shadow: 0.5px 0.5px 0.5px #3F3F3F, -0.5px -0.5px 0.5px #3F3F3F, -0.5px 0.5px 0.5px #3F3F3F, 0.5px -0.5px 0.5px #3F3F3F;
 }
 
 h1 a:hover {
@@ -801,11 +803,26 @@ ul.fixed-nav li a:hover, ul.fixed-nav li a:focus {
 }
 
 .about p {
-  font-size: 1.8rem;
+  font-size: 2rem;
+  line-height: 2.4rem;
   letter-spacing: 0.8px;
   font-weight: 300;
   margin: 30px;
-  margin-right: 12vw;
+  margin-right: 5vw;
+}
+
+.about a {
+  text-transform: lowercase;
+  font-family: "Overpass", sans-serif;
+  color: #800080;
+}
+
+.about a:hover {
+  text-decoration: underline;
+}
+
+.about a:focus {
+  outline: 1px solid #800080;
 }
 
 .skills {
@@ -1048,7 +1065,7 @@ div.a-circles:hover div, div.a-circles:focus div {
   -webkit-animation: Gradient 15s ease infinite;
           animation: Gradient 15s ease infinite;
   color: white;
-  text-shadow: 0px 0px 2px black;
+  text-shadow: 1px 1px 1px black, -1px -1px 1px black, -1px 1px 1px black, 1px -1px 1px black;
 }
 
 .project-info a:first-of-type {
@@ -1174,6 +1191,7 @@ button:hover, button:focus {
   color: white;
   -webkit-text-stroke-width: 1px;
   -webkit-text-stroke-color: #262626;
+  text-shadow: 1px 1px 1px black, -1px -1px 1px black, -1px 1px 1px black, 1px -1px 1px black;
   background: linear-gradient(28deg, #0034ff 0%, #0099ff 18%, #8de3f7 35%, #00b5ff 52%, #8de3f7 72%, #0099ff 88%, #001aff 100%);
   background-size: 400% 400%;
   -webkit-animation: Gradient 15s ease infinite;

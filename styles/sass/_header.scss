@@ -100,6 +100,8 @@ h1 {
         -webkit-text-stroke-width: 1px;
         -webkit-text-stroke-color: $primaryColor;
         transition: color 0.3s ease-in;
+
+        text-shadow: 0.5px 0.5px 0.5px $primaryColor, -0.5px -0.5px 0.5px $primaryColor, -0.5px 0.5px 0.5px $primaryColor, 0.5px -0.5px 0.5px $primaryColor;
         
         &:hover {
             color: $darkAccent;

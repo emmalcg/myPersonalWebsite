@@ -68,6 +68,7 @@ main h2 {
     color: white;
     -webkit-text-stroke-width: 1px;
     -webkit-text-stroke-color: $primaryColor;
+    text-shadow: 0.5px 0.5px 0.5px $primaryColor, -0.5px -0.5px 0.5px $primaryColor, -0.5px 0.5px 0.5px $primaryColor, 0.5px -0.5px 0.5px $primaryColor, 
 }
 
 h3 {
