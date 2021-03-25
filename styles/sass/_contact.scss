@@ -65,6 +65,18 @@
             }
         }
     }
+
+    li:nth-child(4) {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        &:hover {
+            .plant-branch {
+                opacity: 1;
+            }
+        }
+    }
 }
 
 
@@ -153,4 +165,19 @@ button {
     animation: draw 2.5s linear infinite;   
 }
 
+.plant-branch {
+    width: 10rem;
+    opacity: 0;
 
+    path{
+        fill: $lightAccent;
+        stroke: black;
+        stroke-miterlimit: 10;
+        .cls {
+            stroke-width: 1px;
+        }
+        .cls-2 {
+            stroke-width: 0.5px;
+        }
+    }
+}

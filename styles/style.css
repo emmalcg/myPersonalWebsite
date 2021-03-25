@@ -1174,6 +1174,22 @@ div.a-circles:hover div, div.a-circles:focus div {
   opacity: 1;
 }
 
+.social li:nth-child(4) {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.social li:nth-child(4):hover .plant-branch {
+  opacity: 1;
+}
+
 form {
   -ms-grid-row: 2;
   -ms-grid-row-span: 4;
@@ -1280,6 +1296,25 @@ button:hover, button:focus {
   stroke-dashoffset: 1;
   -webkit-animation: draw 2.5s linear infinite;
           animation: draw 2.5s linear infinite;
+}
+
+.plant-branch {
+  width: 10rem;
+  opacity: 0;
+}
+
+.plant-branch path {
+  fill: #fbffe3;
+  stroke: black;
+  stroke-miterlimit: 10;
+}
+
+.plant-branch path .cls {
+  stroke-width: 1px;
+}
+
+.plant-branch path .cls-2 {
+  stroke-width: 0.5px;
 }
 
 footer {
@@ -1431,6 +1466,9 @@ footer a:focus {
   .social li a {
     font-size: 2.2rem;
     padding: 3rem 6rem;
+  }
+  .plant-branch {
+    width: 7rem;
   }
   form {
     margin: 2rem;
