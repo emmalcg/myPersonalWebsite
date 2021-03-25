@@ -72,7 +72,6 @@ mySite.navigation = () => {
 
 mySite.accordion = () => {
     const buttons = document.querySelectorAll('.a-circles');
-    console.log(buttons);
 
     buttons.forEach((button) => {
         button.addEventListener('click', () => {

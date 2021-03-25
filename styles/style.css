@@ -586,6 +586,8 @@ h1 {
   border: 0.5px solid #707070;
   border-left: none;
   border-top: none;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
 }
 
 h1 a {
@@ -953,8 +955,12 @@ div.a-circles:hover div, div.a-circles:focus div {
 }
 
 .project-info a:hover, .project-info a:focus {
-  background: linear-gradient(67deg, #8de3f7 0%, #d0ffe1 100%);
-  background-size: 250%;
+  background: linear-gradient(28deg, #0034ff 0%, #0099ff 18%, #8de3f7 35%, #00b5ff 52%, #8de3f7 72%, #0099ff 88%, #001aff 100%);
+  background-size: 400% 400%;
+  -webkit-animation: Gradient 15s ease infinite;
+          animation: Gradient 15s ease infinite;
+  color: white;
+  text-shadow: 0px 0px 2px black;
 }
 
 .project-info a:first-of-type {
