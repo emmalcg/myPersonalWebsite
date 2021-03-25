@@ -238,7 +238,7 @@ html {
 
 html {
   font-size: 62.5%;
-  color: #707070;
+  color: #3F3F3F;
   font-family: "Overpass", sans-serif;
   background-color: #F5F5F5;
 }
@@ -256,7 +256,7 @@ body {
   max-width: 1600px;
   margin: 0 auto;
   height: 100%;
-  border: 0.5px solid #707070;
+  border: 0.5px solid #3F3F3F;
 }
 
 ul {
@@ -267,7 +267,7 @@ a {
   text-transform: uppercase;
   text-decoration: none;
   font-weight: 600;
-  color: #707070;
+  color: #3F3F3F;
   font-family: "Sequenz";
 }
 
@@ -292,7 +292,7 @@ li a:hover, li a:focus {
   -webkit-animation: Gradient 15s ease infinite;
           animation: Gradient 15s ease infinite;
   color: white;
-  text-shadow: 0px 0px 2px black;
+  text-shadow: 1px 1px 1px black, -1px -1px 1px black, -1px 1px 1px black, 1px -1px 1px black;
 }
 
 main h2 {
@@ -302,7 +302,7 @@ main h2 {
   letter-spacing: 2px;
   color: white;
   -webkit-text-stroke-width: 1px;
-  -webkit-text-stroke-color: #707070;
+  -webkit-text-stroke-color: #3F3F3F;
 }
 
 h3 {
@@ -319,7 +319,7 @@ h3 {
   -ms-grid-column-span: 5;
   grid-area: long-box;
   padding: 10px 110px;
-  border-bottom: 0.5px solid #707070;
+  border-bottom: 0.5px solid #3F3F3F;
   background-color: #fbffe3;
 }
 
@@ -395,7 +395,7 @@ div.loader svg {
 
 div.loader .cls-1 {
   fill: none;
-  stroke: #707070;
+  stroke: #3F3F3F;
   stroke-miterlimit: 10;
   stroke-width: 2px;
   stroke-dasharray: 1;
@@ -451,7 +451,7 @@ div.loader.hidden {
   width: 1.3rem;
   height: 1.3rem;
   border-radius: 50%;
-  border: 0.5px solid #707070;
+  border: 0.5px solid #3F3F3F;
   background: linear-gradient(67deg, #8de3f7 0%, #d0ffe1 100%);
   margin: 6px 0;
   -webkit-transition: all 0.5s ease-in-out;
@@ -495,11 +495,11 @@ ul.mobile-links li {
   height: 7rem;
   font-size: 3rem;
   opacity: 0;
-  border-bottom: 0.5px solid #707070;
+  border-bottom: 0.5px solid #3F3F3F;
 }
 
 ul.mobile-links li:first-child {
-  border-top: 0.5px solid #707070;
+  border-top: 0.5px solid #3F3F3F;
 }
 
 ul.mobile-links li a {
@@ -568,7 +568,7 @@ header .long-box {
   -ms-grid-column: 1;
   -ms-grid-column-span: 5;
   grid-area: long-box;
-  border-top: 0.5px solid #707070;
+  border-top: 0.5px solid #3F3F3F;
 }
 
 .window {
@@ -585,7 +585,7 @@ header .long-box {
 
 .window div {
   width: calc(100% / 3);
-  border-right: 0.1px solid #707070;
+  border-right: 0.1px solid #3F3F3F;
   -webkit-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
 }
@@ -595,11 +595,11 @@ header .long-box {
 }
 
 .window div:nth-of-type(n+4) {
-  border-top: 0.5px solid #707070;
+  border-top: 0.5px solid #3F3F3F;
 }
 
 .window:hover {
-  border: 1px solid #707070;
+  border: 1px solid #3F3F3F;
 }
 
 .window:hover .pane1 {
@@ -643,7 +643,7 @@ h1 {
           align-items: center;
   text-align: center;
   padding: 10px;
-  border: 0.5px solid #707070;
+  border: 0.5px solid #3F3F3F;
   border-left: none;
   border-top: none;
   -webkit-transition: all 0.5s ease-in-out;
@@ -656,7 +656,7 @@ h1 a {
   letter-spacing: 8px;
   color: white;
   -webkit-text-stroke-width: 1px;
-  -webkit-text-stroke-color: #707070;
+  -webkit-text-stroke-color: #3F3F3F;
   -webkit-transition: color 0.3s ease-in;
   transition: color 0.3s ease-in;
 }
@@ -675,7 +675,7 @@ h1 a:hover {
   padding: 1.1rem 2rem 0.6rem;
   background-color: #fbffe3;
   width: 100vw;
-  border-bottom: 0.5px solid #707070;
+  border-bottom: 0.5px solid #3F3F3F;
   -webkit-transition: color 0.5s ease-in;
   transition: color 0.5s ease-in;
 }
@@ -690,7 +690,7 @@ header h2 {
   font-weight: 300;
   letter-spacing: 1.5px;
   line-height: calc(2.5rem + 1vw);
-  border: 0.5px solid #707070;
+  border: 0.5px solid #3F3F3F;
   border-top: none;
   border-bottom: none;
 }
@@ -722,11 +722,11 @@ header h2 span {
       -ms-flex-align: center;
           align-items: center;
   width: 50%;
-  border-bottom: 0.5px solid #707070;
+  border-bottom: 0.5px solid #3F3F3F;
 }
 
 .main-nav li:first-child, .main-nav li:nth-child(3) {
-  border-right: 0.5px solid #707070;
+  border-right: 0.5px solid #3F3F3F;
 }
 
 .main-nav li a {
@@ -763,12 +763,12 @@ ul.fixed-nav li {
 
 ul.fixed-nav li:first-of-type a,
 ul.fixed-nav li:nth-of-type(3) a {
-  border-left: 0.5px solid #707070;
+  border-left: 0.5px solid #3F3F3F;
 }
 
 ul.fixed-nav li:nth-of-type(2) a,
 ul.fixed-nav li:nth-of-type(4) a {
-  border-right: 0.5px solid #707070;
+  border-right: 0.5px solid #3F3F3F;
 }
 
 ul.fixed-nav li a {
@@ -790,14 +790,14 @@ ul.fixed-nav li a:hover, ul.fixed-nav li a:focus {
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
-  border-bottom: 0.5px solid #707070;
+  border-bottom: 0.5px solid #3F3F3F;
   background-color: #F5F5F5;
 }
 
 .about div {
   width: 50%;
   min-width: 550px;
-  border-left: 0.5px solid #707070;
+  border-left: 0.5px solid #3F3F3F;
 }
 
 .about p {
@@ -817,7 +817,7 @@ ul.fixed-nav li a:hover, ul.fixed-nav li a:focus {
       grid-template-rows: 7rem 1fr;
       grid-template-areas: "long-box   long-box    long-box" ".          skills      accordion";
   background-color: #F5F5F5;
-  border-bottom: 0.5px solid #707070;
+  border-bottom: 0.5px solid #3F3F3F;
 }
 
 ul.skills-list {
@@ -835,7 +835,7 @@ ul.skills-list {
       -ms-flex-align: center;
           align-items: center;
   padding: 2rem;
-  border-left: 0.5px solid #707070;
+  border-left: 0.5px solid #3F3F3F;
 }
 
 ul.skills-list li {
@@ -850,7 +850,7 @@ ul.skills-list li img {
   -ms-grid-row: 2;
   -ms-grid-column: 3;
   grid-area: accordion;
-  border-left: 0.5px solid #707070;
+  border-left: 0.5px solid #3F3F3F;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -871,7 +871,7 @@ ul.skills-list li img {
 }
 
 .currently-learning h3 {
-  border-bottom: 0.5px solid #707070;
+  border-bottom: 0.5px solid #3F3F3F;
 }
 
 .currently-building {
@@ -880,7 +880,7 @@ ul.skills-list li img {
 }
 
 .currently-building h3 {
-  border-top: 0.5px solid #707070;
+  border-top: 0.5px solid #3F3F3F;
 }
 
 .a-content {
@@ -922,7 +922,7 @@ div.a-circles div {
   width: 1.3rem;
   height: 1.3rem;
   border-radius: 50%;
-  border: 0.5px solid #707070;
+  border: 0.5px solid #3F3F3F;
   background: linear-gradient(67deg, #8de3f7 0%, #d0ffe1 100%);
   margin: 6px 0;
   -webkit-transition: all 0.5s ease-in-out;
@@ -938,19 +938,15 @@ div.a-circles:hover div, div.a-circles:focus div {
 }
 
 .currently-building.active .a-content {
-  border-top: 0.5px solid #707070;
+  border-top: 0.5px solid #3F3F3F;
 }
 
 .currently-learning div.a-circles {
   bottom: 0.5rem;
 }
 
-.currently-learning span {
-  font-style: italic;
-}
-
 .currently-learning.active .a-content {
-  border-bottom: 0.5px solid #707070;
+  border-bottom: 0.5px solid #3F3F3F;
 }
 
 .a-circles.open {
@@ -964,7 +960,7 @@ div.a-circles:hover div, div.a-circles:focus div {
 
 .portfolio {
   background-color: #F5F5F5;
-  border-bottom: 0.5px solid #707070;
+  border-bottom: 0.5px solid #3F3F3F;
 }
 
 .portfolio .long-box {
@@ -1003,7 +999,7 @@ div.a-circles:hover div, div.a-circles:focus div {
 .project-container .project {
   width: 55rem;
   overflow: hidden;
-  border: 0.5px solid #707070;
+  border: 0.5px solid #3F3F3F;
   margin: 3rem;
 }
 
@@ -1020,7 +1016,7 @@ div.a-circles:hover div, div.a-circles:focus div {
   height: auto;
   margin: 3rem;
   padding-bottom: 3rem;
-  border: 0.5px solid #707070;
+  border: 0.5px solid #3F3F3F;
   text-align: center;
   font-size: 1.9rem;
 }
@@ -1032,7 +1028,7 @@ div.a-circles:hover div, div.a-circles:focus div {
 .project-info h3 {
   padding: 1rem 1rem 0.5rem;
   background-color: #fbffe3;
-  border-bottom: 0.5px solid #707070;
+  border-bottom: 0.5px solid #3F3F3F;
 }
 
 .project-info a {
@@ -1041,7 +1037,7 @@ div.a-circles:hover div, div.a-circles:focus div {
   margin: 2rem;
   padding: 1.3rem 2rem;
   background-color: #fbffe3;
-  border: 0.5px solid #707070;
+  border: 0.5px solid #3F3F3F;
   letter-spacing: 1.3px;
   font-family: "Overpass", sans-serif;
 }
@@ -1087,8 +1083,8 @@ div.a-circles:hover div, div.a-circles:focus div {
   -ms-grid-row-span: 2;
   -ms-grid-column: 4;
   grid-area: social;
-  border-top: 0.5px solid #707070;
-  border-right: 0.5px solid #707070;
+  border-top: 0.5px solid #3F3F3F;
+  border-right: 0.5px solid #3F3F3F;
 }
 
 .social ul {
@@ -1100,8 +1096,8 @@ div.a-circles:hover div, div.a-circles:focus div {
 
 .social li {
   height: 15rem;
-  border-bottom: 0.5px solid #707070;
-  border-left: 0.5px solid #707070;
+  border-bottom: 0.5px solid #3F3F3F;
+  border-left: 0.5px solid #3F3F3F;
 }
 
 .social a {
@@ -1134,18 +1130,18 @@ form {
       -ms-flex-direction: column;
           flex-direction: column;
   font-size: calc(1.5rem + 0.5vw);
-  border: 0.5px solid #707070;
+  border: 0.5px solid #3F3F3F;
   margin-top: 15px;
 }
 
 input,
 textarea {
   font-family: "Overpass", sans-serif;
-  color: #707070;
+  color: #3F3F3F;
   padding: 13px;
   background-color: #F5F5F5;
   border: none;
-  border-bottom: 0.5px solid #707070;
+  border-bottom: 0.5px solid #3F3F3F;
   -webkit-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
 }
@@ -1169,7 +1165,7 @@ button {
   font-size: calc(3rem + 1vw);
   text-align: left;
   padding: 13px 13px 7px 13px;
-  color: #707070;
+  color: #3F3F3F;
   background: #F5F5F5;
   border: none;
 }
@@ -1177,7 +1173,7 @@ button {
 button:hover, button:focus {
   color: white;
   -webkit-text-stroke-width: 1px;
-  -webkit-text-stroke-color: #575757;
+  -webkit-text-stroke-color: #262626;
   background: linear-gradient(28deg, #0034ff 0%, #0099ff 18%, #8de3f7 35%, #00b5ff 52%, #8de3f7 72%, #0099ff 88%, #001aff 100%);
   background-size: 400% 400%;
   -webkit-animation: Gradient 15s ease infinite;
@@ -1187,28 +1183,28 @@ button:hover, button:focus {
 ::-webkit-input-placeholder {
   text-transform: uppercase;
   letter-spacing: 2px;
-  color: #707070;
+  color: #3F3F3F;
   opacity: 1;
 }
 
 :-ms-input-placeholder {
   text-transform: uppercase;
   letter-spacing: 2px;
-  color: #707070;
+  color: #3F3F3F;
   opacity: 1;
 }
 
 ::-ms-input-placeholder {
   text-transform: uppercase;
   letter-spacing: 2px;
-  color: #707070;
+  color: #3F3F3F;
   opacity: 1;
 }
 
 ::placeholder {
   text-transform: uppercase;
   letter-spacing: 2px;
-  color: #707070;
+  color: #3F3F3F;
   opacity: 1;
 }
 
@@ -1334,7 +1330,7 @@ footer a:focus {
         grid-template-areas: "long-box   long-box    long-box" "skills     skills      skills" "accordion     accordion      accordion";
   }
   .currently-learning {
-    border-top: 0.5px solid #707070;
+    border-top: 0.5px solid #3F3F3F;
   }
   .currently-learning h3,
   .currently-building h3 {
