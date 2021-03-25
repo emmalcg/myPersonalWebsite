@@ -706,6 +706,7 @@ ul.fixed-nav li a {
       -ms-flex-pack: end;
           justify-content: flex-end;
   border-bottom: 0.5px solid #707070;
+  background-color: #F5F5F5;
 }
 
 .about div {
@@ -730,6 +731,7 @@ ul.fixed-nav li a {
   -ms-grid-rows: 7rem 1fr;
       grid-template-rows: 7rem 1fr;
       grid-template-areas: "long-box   long-box    long-box" ".          skills      accordion";
+  background-color: #F5F5F5;
   border-bottom: 0.5px solid #707070;
 }
 
@@ -872,6 +874,7 @@ div.a-circles:hover div, div.a-circles:focus div {
 }
 
 .portfolio {
+  background-color: #F5F5F5;
   border-bottom: 0.5px solid #707070;
 }
 

@@ -83,8 +83,6 @@ mySite.accordion = () => {
     })
 }
 
-
-
 mySite.init = () => {
     setTimeout(mySite.startLoader, 2600);
     mySite.navigation()
