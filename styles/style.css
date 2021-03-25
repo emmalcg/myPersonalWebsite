@@ -347,6 +347,10 @@ h3 {
   }
 }
 
+.emphasis {
+  font-weight: 600;
+}
+
 @-webkit-keyframes rotate {
   0% {
     -webkit-transform: rotate(0deg);
@@ -939,6 +943,10 @@ div.a-circles:hover div, div.a-circles:focus div {
 
 .currently-learning div.a-circles {
   bottom: 0.5rem;
+}
+
+.currently-learning span {
+  font-style: italic;
 }
 
 .currently-learning.active .a-content {
