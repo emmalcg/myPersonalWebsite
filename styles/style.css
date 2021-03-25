@@ -789,16 +789,15 @@ ul.fixed-nav li a:hover, ul.fixed-nav li a:focus {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
+  height: auto;
   border-bottom: 0.5px solid #3F3F3F;
   background-color: #F5F5F5;
 }
 
-.about div {
+.about div.me {
   width: 50%;
   min-width: 550px;
+  height: auto;
   border-left: 0.5px solid #3F3F3F;
 }
 
@@ -807,7 +806,7 @@ ul.fixed-nav li a:hover, ul.fixed-nav li a:focus {
   line-height: 2.4rem;
   letter-spacing: 0.8px;
   font-weight: 300;
-  margin: 30px;
+  margin: 3rem;
   margin-right: 5vw;
 }
 
@@ -823,6 +822,19 @@ ul.fixed-nav li a:hover, ul.fixed-nav li a:focus {
 
 .about a:focus {
   outline: 1px solid #800080;
+}
+
+.ethereal {
+  display: block;
+  height: auto;
+  width: 50%;
+  -ms-flex-negative: 2;
+      flex-shrink: 2;
+}
+
+.ethereal:hover {
+  -webkit-box-shadow: inset 0 0 9rem #8de3f7;
+          box-shadow: inset 0 0 9rem #8de3f7;
 }
 
 .skills {
@@ -877,9 +889,15 @@ ul.skills-list li img {
           flex-direction: column;
 }
 
+.accordion:hover {
+  -webkit-box-shadow: inset 0 0 15rem #8de3f7;
+          box-shadow: inset 0 0 15rem #8de3f7;
+}
+
 .currently-learning h3,
 .currently-building h3 {
   text-align: right;
+  background: #F5F5F5;
   padding: 1.3rem 6rem;
 }
 
@@ -1134,6 +1152,28 @@ div.a-circles:hover div, div.a-circles:focus div {
           animation: Gradient 15s ease infinite;
 }
 
+.social li:nth-child(6) {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+.social li:nth-child(6):hover {
+  background: #fbffe3;
+}
+
+.social li:nth-child(6):hover .plant-shape {
+  opacity: 1;
+}
+
 form {
   -ms-grid-row: 2;
   -ms-grid-row-span: 4;
@@ -1226,6 +1266,22 @@ button:hover, button:focus {
   opacity: 1;
 }
 
+.plant-shape {
+  opacity: 0;
+  width: 10rem;
+}
+
+.plant {
+  fill: white;
+  stroke: black;
+  stroke-miterlimit: 10;
+  stroke-width: 3px;
+  stroke-dasharray: 1;
+  stroke-dashoffset: 1;
+  -webkit-animation: draw 2.5s linear infinite;
+          animation: draw 2.5s linear infinite;
+}
+
 footer {
   padding: 10px;
   text-align: center;
@@ -1235,19 +1291,20 @@ footer {
 
 footer a {
   font-family: "Overpass", sans-serif;
-  font-size: 1.8rem;
+  font-size: 2rem;
   letter-spacing: 1px;
-  -webkit-transition: all 0.5s ease-in-out;
-  transition: all 0.5s ease-in-out;
   padding: 0.5rem;
 }
 
 footer a:hover, footer a:focus {
-  color: #2eccf0;
+  color: white;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #3F3F3F;
 }
 
 footer a:focus {
-  border: 0.5px solid #2eccf0;
+  border: 1px solid #2eccf0;
+  text-shadow: 0.5px 0.5px 0.5px #3F3F3F, -0.5px -0.5px 0.5px #3F3F3F, -0.5px 0.5px 0.5px #3F3F3F, 0.5px -0.5px 0.5px #3F3F3F;
 }
 
 @media (max-width: 1200px) {
@@ -1392,6 +1449,15 @@ footer a:focus {
   }
   h1 a {
     letter-spacing: 4px;
+  }
+  .about p {
+    font-size: 1.8rem;
+  }
+  .about div.me {
+    min-width: 100%;
+  }
+  .ethereal {
+    display: none;
   }
   .portfolio .flex-container {
     margin: 2.5rem 1.5rem;

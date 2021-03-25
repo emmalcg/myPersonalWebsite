@@ -5,18 +5,20 @@ footer {
 
     a {
         font-family: $bodyFont;
-        font-size: 1.8rem;
+        font-size: 2rem;
         letter-spacing: 1px;
-        @include transition;
         padding: 0.5rem;                                                             
 
         &:hover, 
         &:focus {
-            color: darken($darkAccent, 20%);
+            color: white;
+        -webkit-text-stroke-width: 1px;
+        -webkit-text-stroke-color: $primaryColor;
         }
 
         &:focus {
-            border: 0.5px solid darken($darkAccent, 20%);
+            border: 1px solid darken($darkAccent, 20%);
+            text-shadow: 0.5px 0.5px 0.5px $primaryColor, -0.5px -0.5px 0.5px $primaryColor, -0.5px 0.5px 0.5px $primaryColor, 0.5px -0.5px 0.5px $primaryColor;
         }
     }
 }

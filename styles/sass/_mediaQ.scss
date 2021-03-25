@@ -172,6 +172,17 @@
             letter-spacing: 4px;
             }
     }
+    .about p {
+        font-size: 1.8rem;
+    }
+
+    .about div.me {
+        min-width: 100%;
+    }
+
+    .ethereal {
+        display: none;
+    }
 
     .portfolio {
         .flex-container {

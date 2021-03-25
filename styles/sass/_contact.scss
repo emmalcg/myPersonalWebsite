@@ -50,6 +50,21 @@
             animation: Gradient 15s ease infinite;   
         }
     }
+
+    li:nth-child(6) {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        @include transition;
+
+        &:hover {
+            background: $lightAccent;
+
+            .plant-shape {
+                opacity: 1;
+            }
+        }
+    }
 }
 
 
@@ -120,3 +135,22 @@ button {
     color: $primaryColor;
     opacity: 1;
 }
+
+.plant-shape {
+    opacity: 0;
+    width: 10rem;
+}
+
+.plant {
+
+    fill: white;
+    stroke: black;
+    stroke-miterlimit: 10;
+    stroke-width: 3px;
+
+    stroke-dasharray: 1;
+    stroke-dashoffset: 1;
+    animation: draw 2.5s linear infinite;   
+}
+
+
