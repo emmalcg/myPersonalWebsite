@@ -1,5 +1,7 @@
 const mySite = {};
 
+console.log('✧･ﾟ: *✧･ﾟ:* developed + designed by emma *:･ﾟ✧*:･ﾟ✧');
+
 mySite.htmlEl = document.querySelector('html')
 mySite.htmlEl.classList.add('no-scroll');
 
@@ -88,7 +90,6 @@ mySite.init = () => {
     mySite.navigation()
     mySite.accordion()
 
-    console.log(✧･ﾟ: *✧･ﾟ:* developed + designed by emma *:･ﾟ✧*:･ﾟ✧)
 }
 
 mySite.init();
