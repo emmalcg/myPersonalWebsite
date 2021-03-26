@@ -87,6 +87,8 @@ mySite.init = () => {
     setTimeout(mySite.startLoader, 2600);
     mySite.navigation()
     mySite.accordion()
+
+    console.log(✧･ﾟ: *✧･ﾟ:* developed + designed by emma *:･ﾟ✧*:･ﾟ✧)
 }
 
 mySite.init();
