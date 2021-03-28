@@ -73,13 +73,19 @@ mySite.navigation = () => {
 
 
 mySite.accordion = () => {
+    const aHeaders = document.querySelectorAll('.a-button');
     const buttons = document.querySelectorAll('.a-circles');
+
+    aHeaders.forEach((header) => {
+        header.addEventListener('click', () => {
+            header.parentElement.classList.toggle('active');
+            header.parentElement.firstElementChild.classList.toggle('open');
+        })
+    })
 
     buttons.forEach((button) => {
         button.addEventListener('click', () => {
             button.parentElement.classList.toggle('active');
-            console.log(button.parentElement);
-
             button.classList.toggle('open');
         })
     })

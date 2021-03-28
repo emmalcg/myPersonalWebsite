@@ -39,34 +39,35 @@ ul.skills-list {
 
     display: flex;
     flex-direction: column;
-
-    &:hover {
-        box-shadow: inset 0 0 15rem $darkAccent;
-    }
 }
 
+button.a-button {
+    width: 100%;
+    border-radius: 0;
+    border: none;
+    &:hover,
+    &:focus {
+        box-shadow: inset 0 0 3rem $darkAccent;
+    }   
+}
 
-.currently-learning h3,
-.currently-building h3 {
+.a-button h3 {
     text-align: right;
-    background: $offWhite;
     padding: 1.3rem 6rem;
+    cursor: pointer;
 }
 
-.currently-learning{
+.currently-learning {
     position: relative;
-    h3 {
-        border-bottom: 0.5px solid $primaryColor;
-    }
+
+    border-bottom: 0.5px solid $primaryColor;
 }
 
 .currently-building {
     margin-top: auto;
     position: relative;
 
-    h3 {
-        border-top: 0.5px solid $primaryColor;
-    }
+    border-top: 0.5px solid $primaryColor;
 }
 
 .a-content {
@@ -94,6 +95,11 @@ ul.skills-list {
     opacity: 1;
 }
 
+.currently-building.active .a-button,
+.currently-learning.active .a-button {
+    box-shadow: inset 0 0 3rem $darkAccent;
+}
+
 div.a-circles {
     cursor: pointer;
     position: absolute;
@@ -112,13 +118,18 @@ div.a-circles {
         @include transition;
     }
 
-    &:hover,
-    &:focus {
+    &.open {
+        transform: rotate(90deg);
         div {
-            background-color: tomato;
+            background: tomato;
         }
     }
+
+    &:hover + div {
+        box-shadow: inset 0 0 3rem $darkAccent;
+    }
 }
+
 
 .currently-building {
     div.a-circles {
@@ -131,19 +142,7 @@ div.a-circles {
 }
 
 .currently-learning {
-    div.a-circles {
-        bottom: 0.5rem;
-    }
-
     &.active .a-content {
         border-bottom: 0.5px solid $primaryColor;
-    }
-}
-
-.a-circles.open {
-    transform: rotate(90deg);
-
-    div {
-        background-color: tomato;
     }
 }

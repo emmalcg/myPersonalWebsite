@@ -11,9 +11,7 @@ footer {
 
         &:hover, 
         &:focus {
-            color: white;
-        -webkit-text-stroke-width: 1px;
-        -webkit-text-stroke-color: $primaryColor;
+            color: darken($darkAccent, 40%);
         }
 
         &:focus {

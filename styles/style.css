@@ -889,32 +889,31 @@ ul.skills-list li img {
           flex-direction: column;
 }
 
-.accordion:hover {
-  -webkit-box-shadow: inset 0 0 15rem #8de3f7;
-          box-shadow: inset 0 0 15rem #8de3f7;
+button.a-button {
+  width: 100%;
+  border-radius: 0;
+  border: none;
 }
 
-.currently-learning h3,
-.currently-building h3 {
+button.a-button:hover, button.a-button:focus {
+  -webkit-box-shadow: inset 0 0 3rem #8de3f7;
+          box-shadow: inset 0 0 3rem #8de3f7;
+}
+
+.a-button h3 {
   text-align: right;
-  background: #F5F5F5;
   padding: 1.3rem 6rem;
+  cursor: pointer;
 }
 
 .currently-learning {
   position: relative;
-}
-
-.currently-learning h3 {
   border-bottom: 0.5px solid #3F3F3F;
 }
 
 .currently-building {
   margin-top: auto;
   position: relative;
-}
-
-.currently-building h3 {
   border-top: 0.5px solid #3F3F3F;
 }
 
@@ -944,6 +943,12 @@ ul.skills-list li img {
   opacity: 1;
 }
 
+.currently-building.active .a-button,
+.currently-learning.active .a-button {
+  -webkit-box-shadow: inset 0 0 3rem #8de3f7;
+          box-shadow: inset 0 0 3rem #8de3f7;
+}
+
 div.a-circles {
   cursor: pointer;
   position: absolute;
@@ -964,8 +969,18 @@ div.a-circles div {
   transition: all 0.5s ease-in-out;
 }
 
-div.a-circles:hover div, div.a-circles:focus div {
-  background-color: tomato;
+div.a-circles.open {
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+}
+
+div.a-circles.open div {
+  background: tomato;
+}
+
+div.a-circles:hover + div {
+  -webkit-box-shadow: inset 0 0 3rem #8de3f7;
+          box-shadow: inset 0 0 3rem #8de3f7;
 }
 
 .currently-building div.a-circles {
@@ -976,21 +991,8 @@ div.a-circles:hover div, div.a-circles:focus div {
   border-top: 0.5px solid #3F3F3F;
 }
 
-.currently-learning div.a-circles {
-  bottom: 0.5rem;
-}
-
 .currently-learning.active .a-content {
   border-bottom: 0.5px solid #3F3F3F;
-}
-
-.a-circles.open {
-  -webkit-transform: rotate(90deg);
-          transform: rotate(90deg);
-}
-
-.a-circles.open div {
-  background-color: tomato;
 }
 
 .portfolio {
@@ -1078,12 +1080,9 @@ div.a-circles:hover div, div.a-circles:focus div {
 }
 
 .project-info a:hover, .project-info a:focus {
-  background: linear-gradient(28deg, #0034ff 0%, #0099ff 18%, #8de3f7 35%, #00b5ff 52%, #8de3f7 72%, #0099ff 88%, #001aff 100%);
-  background-size: 400% 400%;
-  -webkit-animation: Gradient 15s ease infinite;
-          animation: Gradient 15s ease infinite;
-  color: white;
-  text-shadow: 1px 1px 1px black, -1px -1px 1px black, -1px 1px 1px black, 1px -1px 1px black;
+  background: white;
+  -webkit-box-shadow: inset 0 0 2rem #8de3f7;
+          box-shadow: inset 0 0 2rem #8de3f7;
 }
 
 .project-info a:first-of-type {
@@ -1232,7 +1231,7 @@ textarea {
           flex-grow: 1;
 }
 
-button {
+.contact button {
   font-family: "Sequenz";
   text-transform: uppercase;
   font-size: calc(3rem + 1vw);
@@ -1243,7 +1242,7 @@ button {
   border: none;
 }
 
-button:hover, button:focus {
+.contact button:hover, .contact button:focus {
   color: white;
   -webkit-text-stroke-width: 1px;
   -webkit-text-stroke-color: #262626;
@@ -1332,9 +1331,7 @@ footer a {
 }
 
 footer a:hover, footer a:focus {
-  color: white;
-  -webkit-text-stroke-width: 1px;
-  -webkit-text-stroke-color: #3F3F3F;
+  color: #0c8eac;
 }
 
 footer a:focus {
