@@ -124,7 +124,8 @@ h1 {
 
         text-shadow: 0.5px 0.5px 0.5px $primaryColor, -0.5px -0.5px 0.5px $primaryColor, -0.5px 0.5px 0.5px $primaryColor, 0.5px -0.5px 0.5px $primaryColor;
         
-        &:hover {
+        &:hover,
+        &:focus {
             color: $darkAccent;
         }
     }
