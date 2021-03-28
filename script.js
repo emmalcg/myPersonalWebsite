@@ -97,6 +97,11 @@ mySite.showPool = () => {
     poolButton.addEventListener('click', () => {
         poolButton.classList.toggle('show');
     })
+    poolButton.addEventListener('keyup', (e) => {
+        if (e.key === 'Enter'){
+            poolButton.classList.toggle('show');
+        }
+    })
 }
 
 
