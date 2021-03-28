@@ -91,10 +91,20 @@ mySite.accordion = () => {
     })
 }
 
+mySite.showPool = () => {
+    const poolButton = document.querySelector('.ethereal');
+
+    poolButton.addEventListener('click', () => {
+        poolButton.classList.toggle('show');
+    })
+}
+
+
 mySite.init = () => {
     setTimeout(mySite.startLoader, 2600);
-    mySite.navigation()
-    mySite.accordion()
+    mySite.navigation();
+    mySite.accordion();
+    mySite.showPool();
 
 }
 

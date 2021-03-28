@@ -39,6 +39,7 @@
 
 .ethereal {
     position: relative;
+    cursor: pointer;
     display: block;
     height: auto;
     width: 50%;
@@ -64,5 +65,21 @@
         p {
             opacity: 1;
         }
+    }
+
+
+    img {
+        position: absolute;
+        min-width: 100%;
+        height: 100%;
+        opacity: 0
+    }
+}
+
+.ethereal.show {
+    overflow: hidden;
+
+    img {
+        opacity: 1;
     }
 }

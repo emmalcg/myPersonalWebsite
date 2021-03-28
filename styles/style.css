@@ -854,6 +854,7 @@ ul.fixed-nav li a:hover, ul.fixed-nav li a:focus {
 
 .ethereal {
   position: relative;
+  cursor: pointer;
   display: block;
   height: auto;
   width: 50%;
@@ -881,6 +882,21 @@ ul.fixed-nav li a:hover, ul.fixed-nav li a:focus {
 }
 
 .ethereal:hover p {
+  opacity: 1;
+}
+
+.ethereal img {
+  position: absolute;
+  min-width: 100%;
+  height: 100%;
+  opacity: 0;
+}
+
+.ethereal.show {
+  overflow: hidden;
+}
+
+.ethereal.show img {
   opacity: 1;
 }
 
