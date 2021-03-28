@@ -23,17 +23,21 @@ body {
     border: 0.5px solid $primaryColor;
 }
 
-ul  {
-    list-style-type: none;
+a {
+    text-decoration: none;
+    color: $primaryColor; 
 }
 
-a {
-    text-transform: uppercase;
-    text-decoration: none;
-    font-weight: 600;
-    color: $primaryColor;  
-    font-family: $headingFont;
+ul  {
+    list-style-type: none;
+
+    a {
+        text-transform: uppercase;
+        font-weight: 600; 
+        font-family: $headingFont;
+    }
 }
+
 
 //general li styles main-nav, mobile-nav and social 
 li {

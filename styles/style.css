@@ -259,15 +259,18 @@ body {
   border: 0.5px solid #3F3F3F;
 }
 
+a {
+  text-decoration: none;
+  color: #3F3F3F;
+}
+
 ul {
   list-style-type: none;
 }
 
-a {
+ul a {
   text-transform: uppercase;
-  text-decoration: none;
   font-weight: 600;
-  color: #3F3F3F;
   font-family: "Sequenz";
 }
 
@@ -599,32 +602,57 @@ header .long-box {
   border-top: 0.5px solid #3F3F3F;
 }
 
-.window:hover {
+.big-box p {
+  position: absolute;
+  bottom: -3.5rem;
+  padding: 0.5rem;
+  font-size: 1.6rem;
+  font-style: italic;
+  background: white;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+  border: 0.5px solid #3F3F3F;
+  opacity: 0;
+}
+
+.big-box:hover .window,
+.big-box:focus .window {
   border: 1px solid #3F3F3F;
 }
 
-.window:hover .pane1 {
+.big-box:hover .window .pane1,
+.big-box:focus .window .pane1 {
   background: #c9ac7e;
 }
 
-.window:hover .pane2 {
+.big-box:hover .window .pane2,
+.big-box:focus .window .pane2 {
   background: #edc68a;
 }
 
-.window:hover .pane3 {
+.big-box:hover .window .pane3,
+.big-box:focus .window .pane3 {
   background: #ffd578;
 }
 
-.window:hover .pane4 {
+.big-box:hover .window .pane4,
+.big-box:focus .window .pane4 {
   background: #bea076;
 }
 
-.window:hover .pane5 {
+.big-box:hover .window .pane5,
+.big-box:focus .window .pane5 {
   background: #e5bd84;
 }
 
-.window:hover .pane6 {
+.big-box:hover .window .pane6,
+.big-box:focus .window .pane6 {
   background: #ffcc72;
+}
+
+.big-box:hover p,
+.big-box:focus p {
+  opacity: 1;
 }
 
 h1 {
@@ -825,6 +853,7 @@ ul.fixed-nav li a:hover, ul.fixed-nav li a:focus {
 }
 
 .ethereal {
+  position: relative;
   display: block;
   height: auto;
   width: 50%;
@@ -832,9 +861,27 @@ ul.fixed-nav li a:hover, ul.fixed-nav li a:focus {
       flex-shrink: 2;
 }
 
+.ethereal p {
+  position: absolute;
+  top: -3.5rem;
+  right: 0;
+  padding: 0.5rem;
+  font-size: 1.6rem;
+  font-style: italic;
+  background: white;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+  border: 0.5px solid #3F3F3F;
+  opacity: 0;
+}
+
 .ethereal:hover {
   -webkit-box-shadow: inset 0 0 9rem #8de3f7;
           box-shadow: inset 0 0 9rem #8de3f7;
+}
+
+.ethereal:hover p {
+  opacity: 1;
 }
 
 .skills {
@@ -891,6 +938,7 @@ ul.skills-list li img {
 
 button.a-button {
   width: 100%;
+  background: #F5F5F5;
   border-radius: 0;
   border: none;
 }
@@ -1076,7 +1124,7 @@ div.a-circles:hover + div {
   background-color: #fbffe3;
   border: 0.5px solid #3F3F3F;
   letter-spacing: 1.3px;
-  font-family: "Overpass", sans-serif;
+  text-transform: uppercase;
 }
 
 .project-info a:hover, .project-info a:focus {
