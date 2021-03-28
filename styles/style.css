@@ -930,10 +930,32 @@ ul.skills-list {
 
 ul.skills-list li {
   margin: 1.8rem;
+  position: relative;
 }
 
 ul.skills-list li img {
   height: calc(4rem + 2vw);
+}
+
+ul.skills-list li p {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  font-size: 1.6rem;
+  width: auto;
+  text-align: center;
+  padding: 0.5rem;
+  background: #fbffe3;
+  outline: 0.5px solid #3F3F3F;
+  opacity: 0;
+  -webkit-transition: opacity 0.2s ease;
+  transition: opacity 0.2s ease;
+}
+
+ul.skills-list li:hover p, ul.skills-list li:focus p {
+  opacity: 1;
 }
 
 .accordion {
