@@ -27,12 +27,12 @@
         text-transform: lowercase;
         font-family: $bodyFont;
         color:#800080;
+        padding: 0.2rem;
 
-        &:hover {
-            text-decoration: underline;
-        }
+        &:hover,
         &:focus {
-            outline: 1px solid #800080;
+            text-decoration: underline;
+            background: #fcddfc;
         }
     }
 }
