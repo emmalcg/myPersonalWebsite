@@ -1450,6 +1450,9 @@ footer a:focus {
         grid-template-rows: 10rem 0.1rem 1fr 7rem;
         grid-template-areas: "header     header      header" "header     header      header" "small-box   h2      h2" "long-box       long-box        long-box";
   }
+  header .big-box {
+    display: none;
+  }
   h1 {
     -webkit-box-pack: start;
         -ms-flex-pack: start;
