@@ -4,6 +4,7 @@ html {
     
     font-family: $bodyFont;
     background-color: $offWhite;
+    scroll-behavior: smooth;
 
     * {
         margin: 0;

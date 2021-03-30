@@ -241,6 +241,7 @@ html {
   color: #3F3F3F;
   font-family: "Overpass", sans-serif;
   background-color: #F5F5F5;
+  scroll-behavior: smooth;
 }
 
 html * {
