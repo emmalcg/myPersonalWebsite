@@ -579,6 +579,7 @@ header .long-box {
 .window {
   position: absolute;
   top: 0;
+  cursor: alias;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
