@@ -192,6 +192,10 @@ header h2 {
         border-right:0.5px solid $primaryColor;
     }
     
+    &:nth-child(2) {
+        cursor: alias;
+    }
+    
     a {
         padding: 1.5rem 1.5rem 1.5rem 3rem;
         text-align: right;
@@ -217,6 +221,7 @@ ul.fixed-nav {
     z-index: 2;
     
     width: 40%;
+    
     
     li:nth-child(3),
     li:nth-child(4) {

@@ -761,6 +761,10 @@ header h2 span {
   border-right: 0.5px solid #3F3F3F;
 }
 
+.main-nav li:nth-child(2) {
+  cursor: alias;
+}
+
 .main-nav li a {
   padding: 1.5rem 1.5rem 1.5rem 3rem;
   text-align: right;
@@ -931,12 +935,12 @@ ul.skills-list {
 }
 
 ul.skills-list li {
-  margin: 1.8rem;
+  margin: 1.5rem;
   position: relative;
 }
 
 ul.skills-list li img {
-  height: calc(4rem + 2vw);
+  height: calc(4rem + 1.8vw);
 }
 
 ul.skills-list li p {
